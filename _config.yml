@@ -1,9 +1,9 @@
 # Site settings
-title: Welcome
-SEOTitle: Make game for you
+title: Burt
+SEOTitle: 我们的征途是星辰大海！
 header-img: img/home-bg.jpg
 email: 905646963@qq.com
-description: "我们的征途是星辰大海！"
+description: "谁看冰海战纪，我们就是一辈子的好朋友"
 keyword: ""
 url: ""              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
@@ -68,7 +68,7 @@ ga_domain:
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "谁看冰海战纪我们就是一辈子的好朋友。"
+sidebar-about-description: "资深同性恋交友网站会员"
 sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
