@@ -15,7 +15,7 @@ RSS: false
 weibo_username:   realburt41
 zhihu_username:   realburt41
 github_username:  realburt41
-twitter_username: realburt41
+twitter_username:  realburt41
 #facebook_username: 
 
 
@@ -52,7 +52,7 @@ kramdown:
 # Duoshuo settings
 duoshuo_username: 
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true              # set to false if you want to use Comment without Sharing
+duoshuo_share: false           # set to false if you want to use Comment without Sharing
 
 
 
