@@ -79,3 +79,4 @@ a * b = a1 * b1 + a2 * b2 + a3 * b3
 
 那么点乘在Unity有什么作用呢？
 
+to be continued...
