@@ -4,7 +4,7 @@ title:      "Unity中的向量"
 subtitle:   "向量、叉积、点积....."
 date:       2020-2-16
 author:     "Burt"
-header-img: "img/Math.jpg"
+header-img: "img/Math.JPG"
 tags:
     - Unity
     - Math
