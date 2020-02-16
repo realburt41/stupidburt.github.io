@@ -7,7 +7,7 @@ author:     "Burt"
 header-img: "img/simpleCamera.jpg"
 tags:
     - Unity
-	- Camera
+    - Camera
 ---
 
 
