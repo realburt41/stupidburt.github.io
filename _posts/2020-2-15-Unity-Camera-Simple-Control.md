@@ -1,0 +1,182 @@
+---
+layout:     post
+title:      "游戏摄像机控制"
+subtitle:   "第三人称相机基本功能"
+date:       2020-2-15
+author:     "Burt"
+header-img: "img/simpleCamera.jpg"
+tags:
+    - Unity
+    - Camera
+---
+
+
+
+## 前言
+
+> Hello World!
+
+折腾了两天，终于可以开始写自己的博客啦！感谢[黄玄的开源博客项目](https://github.com/Huxpro/huxblog-boilerplate)。废话不多说，开始第一篇博客！
+
+---
+
+## Catalog
+
+
+1. [目的以及成果](#目的以及成果)
+4. [思路](#思路)
+3. [完整代码](#完整代码)
+
+
+
+
+
+
+
+
+## 目的以及成果 
+
+
+
+今天我们要来实现动作游戏内的最基本的——摄！相！机！移！动！
+
+![](D:\BlogSpace\img\in-post\post-js-version\revolve.gif)
+
+<small class="img-hint">目标是盯着这个Cube！</small>
+
+
+
+## 代码编写
+
+首先在Main Camera建立一个脚本。
+
+其次我们要知道，相机移动是通过鼠标移动完成
+
+所以首先我们需要获取鼠标输入
+
+```c#
+float x = Input.GetAxis("Mouse X");
+float y = Input.GetAxis("Mouse Y");
+```
+
+但是，Input.GetAxis("Mouse X/Mouse Y")传进来的值是鼠标x，y坐标的增减量，所以我们的代码要改成
+
+```c#
+float x += -Input.GetAxis("Mouse X") * isReverseX;	//isReverse：反转轴的值，1或者是-1
+float y += Input.GetAxis("Mouse Y") * isReverseY;
+```
+
+之后我们的x，y就会变成相机移动的基准二维坐标值
+
+转换为四元数，我们的相机就要根据下面的tempRotation来自旋转
+
+```c#
+Quaternion tempRotation = Quaternion.Euler(y, x, 0);
+```
+
+定义相机与目标的距离
+```c#
+Vector3 dis = new Vector3(0.0f, 0.0f, -distance);
+```
+
+接下来就是关键一步
+
+```c#
+Vector3 tempPosition = tempRotation * dis + target.position	//target.position是角色偏移量
+```
+
+Quaternion与Vector3的乘积是啥意思？
+
+首先我们要知道Quaternion.Euler(y,x,0)表示
+
+返回一个绕x轴旋转y度，再绕y轴旋转x度的Quaternion
+
+例如Quaternion.Euler(0,90, 0);
+
+就是返回一个绕y轴旋转90度的Quaternion
+
+Quaternion与Vector3的乘积相当于Quaternion的旋转作用在Vector身上
+
+所以当我们看到Quaternion.Euler(0,90, 0)与Vector3(0,0,10)的乘积
+
+会返回一个Vector3(0,0,10)
+
+具体为什么会这样请看。。。。
+
+所以说了这么多，这句代码的意思就是让dis变量按照tempRotation的值旋转位置
+
+之后再把位置赋值给相机位置就可以啦！
+```c#
+transform.rotation = rotation;
+transform.position = position;
+```
+
+
+
+end
+
+-----
+
+
+
+
+
+## 完整代码
+
+```c#
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraFollow : MonoBehaviour {
+
+    public Transform target;		//跟随的目标
+    
+    public float distance = 5.0f;	//相机距离目标几米
+    public float xSpeed = 60.0f;	//x旋转速度
+    public float ySpeed = 60.0f;	//y旋转速度
+
+    public float height = 1.3f;		//跟随的高度
+
+    public float yMinLimit = -60f;	//限制y轴的范围
+    public float yMaxLimit = 60f;
+    
+    
+    
+    public float x = 0.0f;
+    public float y = 0.0f;
+
+    // Use this for initialization
+    void Start()
+    {
+        Vector3 angles = transform.eulerAngles;	//获取相机初始角度，从当前角度开始旋转
+        x = angles.y;
+        y = angles.x;
+    }
+
+    void LateUpdate()
+    {
+        if (target)
+        {
+           	x += Input.GetAxis("Mouse X") * xSpeed * distance;
+            y += Input.GetAxis("Mouse Y") * ySpeed;
+
+            y = ClampAngle(y, yMinLimit, yMaxLimit);	//这个方法是防止四元数万向锁
+
+            Quaternion tempRotation = Quaternion.Euler(y, x, 0);
+
+            Vector3 dis = new Vector3(0.0f, 0.0f, -distance);
+            Vector3 tempPosition = tempRotation * dis + target.position + new Vector3(0,height,0);
+
+            transform.rotation = tempRotation;
+            transform.position = tempPosition;
+        }
+    }
+
+    private float ClampAngle(float angle, float min, float max)
+    {
+        if (angle < -360F)	angle += 360F;
+        if (angle > 360F)	angle -= 360F;
+        return Mathf.Clamp(angle, min, max);
+    }
+}
+```
