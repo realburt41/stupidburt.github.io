@@ -379,12 +379,12 @@ pre code {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 400px;
+  margin-bottom: 0px;
   /* 0 on mobile, modify by Hux */
 }
 @media only screen and (min-width: 768px) {
   .intro-header {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     /* response on desktop */
   }
 }
