@@ -26,6 +26,7 @@ tags:
 1. [目的以及成果](#目的以及成果)
 4. [思路](#思路)
 3. [完整代码](#完整代码)
+4. [总结](#总结)
 
 
 
@@ -40,7 +41,7 @@ tags:
 
 今天我们要来实现动作游戏内的最基本的——摄！相！机！移！动！
 
-![](/img/in-post/post-js-version/revolve.gif)
+![](D:\BlogSpace\img\in-post\post-js-version\revolve.gif)
 
 <small class="img-hint">目标是盯着这个Cube！</small>
 
@@ -62,8 +63,9 @@ float y = Input.GetAxis("Mouse Y");
 但是，Input.GetAxis("Mouse X/Mouse Y")传进来的值是鼠标x，y坐标的增减量，所以我们的代码要改成
 
 ```c#
-float x += -Input.GetAxis("Mouse X") * isReverseX;	//isReverse：反转轴的值，1或者是-1
-float y += Input.GetAxis("Mouse Y") * isReverseY;
+float x += -Input.GetAxis("Mouse X") * isReverseX == true ? -1 : 1;	
+float y += Input.GetAxis("Mouse Y") * isReverseY == true ? -1 : 1;
+//isReverse是否要反转轴
 ```
 
 之后我们的x，y就会变成相机移动的基准二维坐标值
@@ -113,12 +115,6 @@ transform.position = position;
 
 
 
-end
-
------
-
-
-
 
 
 ## 完整代码
@@ -140,7 +136,8 @@ public class CameraFollow : MonoBehaviour {
     public float yMinLimit = -60f;	//限制y轴的范围
     public float yMaxLimit = 60f;
     
-    
+    public bool isReverseX = false;
+    public bool isReverseY = false;
     
     public float x = 0.0f;
     public float y = 0.0f;
@@ -157,10 +154,11 @@ public class CameraFollow : MonoBehaviour {
     {
         if (target)
         {
-           	x += Input.GetAxis("Mouse X") * xSpeed * distance;
-            y += Input.GetAxis("Mouse Y") * ySpeed;
-
-            y = ClampAngle(y, yMinLimit, yMaxLimit);	//这个方法是防止四元数万向锁
+           	x += Input.GetAxis("Mouse X") * xSpeed * isReverseX == true ? -1 : 1;
+            y += Input.GetAxis("Mouse Y") * ySpeed * isReverseY == true ? -1 : 1;
+			
+            //使y始终保持在取值范围内
+            y = Mathf.Clamp(angle, min, max);	
 
             Quaternion tempRotation = Quaternion.Euler(y, x, 0);
 
@@ -172,11 +170,24 @@ public class CameraFollow : MonoBehaviour {
         }
     }
 
-    private float ClampAngle(float angle, float min, float max)
-    {
-        if (angle < -360F)	angle += 360F;
-        if (angle > 360F)	angle -= 360F;
-        return Mathf.Clamp(angle, min, max);
-    }
 }
 ```
+
+
+
+
+
+## 总结
+
+1. 先获取鼠标输入
+2. 将鼠标输入传进一个四元数tempRotation来保存鼠标位移，相机自身将根据tempRotation来旋转，类似地球自转
+3. 建立局部向量dis和tempPosition，前者记录相机与玩家位置的距离，后者根据dis和tempRotation确定鼠标移动后的相机位置，类似地球绕太阳公转
+4. 赋值
+
+
+
+PS：
+
+- 代码放在LateUpdate，是因为相机是在玩家移动之后再移动，玩家的行为一般放在Update函数，LateUpdate函数则是再Update函数之后进行。
+
+  
