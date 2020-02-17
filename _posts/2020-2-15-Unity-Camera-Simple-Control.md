@@ -41,13 +41,13 @@ tags:
 
 今天我们要来实现动作游戏内的最基本的——摄！相！机！移！动！
 
-![](D:\BlogSpace\img\in-post\post-js-version\revolve.gif)
+![](img/in-post/post-js-version/revolve.gif)
 
 <small class="img-hint">目标是盯着这个Cube！</small>
 
 
 
-## 代码编写
+## 思路
 
 首先在Main Camera建立一个脚本。
 
