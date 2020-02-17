@@ -4,7 +4,7 @@ title:      "Unity中的向量"
 subtitle:   "向量、叉积、点积....."
 date:       2020-2-16
 author:     "Burt"
-header-img: "img/Math.JPG"
+header-img: "img/in-post/Math/Math-bg.jpg"
 tags:
     - Unity
     - Math
@@ -79,4 +79,3 @@ a * b = a1 * b1 + a2 * b2 + a3 * b3
 
 那么点乘在Unity有什么作用呢？
 
-to be continued...
