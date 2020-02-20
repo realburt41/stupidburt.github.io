@@ -34,7 +34,7 @@ tags:
 
 角色滴自由移动~~，包括跳跃，翻滚，攻击！~~
 
-![](img/in-post/Character/Character-move1.gif)
+![CharacterMove](/img/in-post/Character/Character-move1.gif)
 
 <small class="img-hint">在这片自由的世界迈出第一步</small>
 
@@ -56,7 +56,7 @@ tags:
 
 建立一个变量叫`InputMagnitude`
 
-![](img/in-post/Character/blendtree.png)
+![Animator](/img/in-post/Character/blendtree.png)
 
 记得把角色Animator Controller给到角色的Animator
 
@@ -140,7 +140,7 @@ Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(direction, Vect
 
 假如我们的代码就这样编译执行，会发生。。
 
-![](img/in-post/Character/Character-move2.gif)
+![error](/img/in-post/Character/Character-move2.gif)
 
 <small class="img-hint">我没有按转向前！</small>
 
