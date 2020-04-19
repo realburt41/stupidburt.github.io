@@ -87,9 +87,9 @@ tags:
 
 1. 向量的模：模代表向量的长度，模只有正数没有负数
 
-   ​					公式：|V| =  √ v<sub>1</sub><sup>2</sup> +  v<sub>2</sub><sup>2</sup> + ... + √v<sub>n</sub><sup>2</sup>
+   公式：|V| =  √ v<sub>1</sub><sup>2</sup> +  v<sub>2</sub><sup>2</sup> + ... + √v<sub>n</sub><sup>2</sup>
 
-   ​					例：A（3，4，5），则|A| = √ 3<sup>2</sup> + 4<sup>2</sup> + 5<sup>2</sup> = 5√ 2
+   例：A（3，4，5），则|A| = √ 3<sup>2</sup> + 4<sup>2</sup> + 5<sup>2</sup> = 5√ 2
 
 ​                                                     
 
@@ -99,9 +99,9 @@ tags:
 
 2. 单位向量：也叫标准化向量。即只关心方向不关心大小，模为1的向量。
 
-   ​					公式：V<sub>nor</sub> = V/|V| 
+   公式：V<sub>nor</sub> = V/|V| 
 
-   ​					例：A<sub>nor</sub>（12，-5） = （12，-5）/ √ 12<sup>2</sup> + （-5）<sup>2</sup>  = （0.923，-0.385）
+   例：A<sub>nor</sub>（12，-5） = （12，-5）/ √ 12<sup>2</sup> + （-5）<sup>2</sup>  = （0.923，-0.385）
 
 
 
