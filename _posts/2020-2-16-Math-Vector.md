@@ -86,9 +86,9 @@ tags:
 
 1. 向量的模：模代表向量的长度，模只有正数没有负数
 
-   公式：|V| =  √ v<sub>1</sub><sup>2</sup> +  v<sub>2</sub><sup>2</sup> + ... + √v<sub>n</sub><sup>2</sup>
+   公式：V<sub>abs</sub> =  √ v<sub>1</sub><sup>2</sup> +  v<sub>2</sub><sup>2</sup> + ... + √v<sub>n</sub><sup>2</sup>
 
-   例：A（3，4，5），则|A| = √ 3<sup>2</sup> + 4<sup>2</sup> + 5<sup>2</sup> = 5√ 2
+   例：A（3，4，5），则 A<sub>abs</sub> = √ 3<sup>2</sup> + 4<sup>2</sup> + 5<sup>2</sup> = 5√ 2
 
 ​                                                     
 
@@ -98,7 +98,7 @@ tags:
 
 2. 单位向量：也叫标准化向量。即只关心方向不关心大小，模为1的向量。
 
-   公式：V<sub>nor</sub> = V/|V| 
+   公式：V<sub>nor</sub> = V / V<sub>abs</sub>
 
    例：A<sub>nor</sub>（12，-5） = （12，-5）/ √ 12<sup>2</sup> + （-5）<sup>2</sup>  = （0.923，-0.385）
 
@@ -176,7 +176,7 @@ A **·** B =  a<sub>1</sub> **·** b<sub>1 </sub> + a<sub>2</sub> **·** b<sub>
 
 或者
 
-A **·** B = |A| **·** |B| **·** cosθ
+A **·** B =  A<sub>abs</sub> **·**  B<sub>abs</sub>  **·** cosθ
 
 可以看出他的结果是**标量**
 
@@ -213,7 +213,7 @@ Vector3.Dot(Transform.up,target.position-tranform.position)
 
 **PS**
 
-- θ = arccos（（A **·** B）/（|A| **·** |B|））
+- θ = arccos（（A **·** B）/（ A<sub>abs</sub> **·** B<sub>abs</sub>））
 - 向量大小并不影响点乘结果的符号。
 - 零向量与任何向量的点乘都是0，所以可以看作零向量与任何向量都垂直
 
@@ -250,7 +250,7 @@ A **×** B =  （a<sub>2</sub> **·** b<sub>3 </sub> - a<sub>3</sub> **·** b<su
 **PS**：
 
 - 如果叉积和点积同在一条算式中，叉积优先级较高
-- |A **×** B | = |A | |B| sin  θ 
+- （A **×** B）<sub>abs</sub> =  A<sub>abs</sub> × B<sub>abs</sub> sin  θ 
 - 零向量与叉积平行
 
 
@@ -285,23 +285,23 @@ B投影到A上得到B<sub>1</sub>
 
 此时称OB<sub>1</sub>为向量B在向量A上的投影
 
-一般来说，求OB<sub>1</sub>，即向量B在向量A的投影为：OB<sub>1</sub> =A × |OB<sub>1</sub>| / |A|
+一般来说，求OB<sub>1</sub>，即向量B在向量A的投影为：OB<sub>1</sub> =A × OB<sub>1</sub><sub>abs</sub> / A<sub>abs</sub>
 
 这样很绕，但幸运的是，使用三角分解可以更方便的算出结果
 
-cosθ = |OB<sub>1</sub>| / |B| 
+cosθ = OB<sub>1</sub><sub>abs</sub> / B<sub>abs</sub>
 
 等价于
 
-|OB<sub>1</sub>| =  cosθ × |B|
+OB<sub>1</sub><sub>abs</sub> =  cosθ × B<sub>abs</sub>
 
 所以
 
-OB<sub>1</sub> = A × cosθ × |B|/ |A|
+OB<sub>1</sub> = A × cosθ × B<sub>abs </sub>/ A<sub>abs</sub>
 
-​		= A ×  |A| × |B| × cosθ/ |A|<sup>2</sup>
+​		= A ×  A<sub>abs </sub>× B<sub>abs</sub> × cosθ / A<sub>abs</sub><sup>2</sup>
 
-​		= A  ×  A × B / |A|<sup>2</sup>
+​		= A  ×  A × B /  A<sub>abs</sub> <sup>2</sup>
 
 假如A是单位向量，那么也就不用除法了
 
@@ -313,7 +313,7 @@ OB<sub>1</sub> =  A  ×  A × B
 
 此时就有公式：
 
-- B<sub>1</sub>B = |B| - OB<sub>1</sub> =  |B| - A<sup>2</sup> × B
+- B<sub>1</sub>B = B<sub>abs</sub> - OB<sub>1</sub> =  B<sub>abs</sub> - A<sup>2</sup> × B
 
 
 
