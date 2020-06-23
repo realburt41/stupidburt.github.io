@@ -1,9 +1,11 @@
-# HuxBlog Boilerplate
+# Hey
 
-##### This is the boilerplate of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), all documents is over there!
+##### This is Burt's blog repositories
 
-#### [View Boilerplate &rarr;](http://huangxuan.me/huxblog-boilerplate/)
+#### make some games..
 
-#### [View Live Hux Blog &rarr;](http://huangxuan.me)
+#### find some funny thing..
 
-## If you like Hux Blog, Please star [huxpro.github.io repo](https://github.com/Huxpro/huxpro.github.io) instead of this! Thank you!
+## If you like my Blog, just star it
+
+## And this is author [huxpro.github.io repo](https://github.com/Huxpro/huxpro.github.io)
