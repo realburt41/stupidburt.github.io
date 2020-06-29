@@ -16,7 +16,6 @@ tags:
 
 > Hello World!
 
-折腾了两天，终于可以开始写自己的博客啦！感谢[黄玄的开源博客项目](https://github.com/Huxpro/huxblog-boilerplate)。废话不多说，开始第一篇博客！
 
 ---
 
