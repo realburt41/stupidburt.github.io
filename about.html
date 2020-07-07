@@ -1,0 +1,136 @@
+---
+layout: page
+title: "About"
+description: "ko no dio da!"
+header-img: "img/main-bg/about-bg.jpg"
+---
+
+
+
+<!-- Language Selector -->
+<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英语 English </option>
+</select>
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+
+    <blockquote>
+        难道你会记得至今为止你吃过多少片面包吗?
+        <br><p align = "right">——迪奥·不懒惰</p>
+    </blockquote>
+    
+    <p style="text-indent:2em">大家好，我是Unity草埔地区技术总监，欢迎大家来到我的博客，希望我的博客能给你带来快乐，带不来的话，你他喵打我啊。</p>
+    <p style="text-indent:2em">
+        开玩笑的哈哈，搭建这个博客花了两天，不喜欢用商业博客因为有广告也不能定制。偶然知道Github Page可以搭建，
+        但是只能用Jekyll和Ruby，好在搭建也不是很难，以前也学过相应的网页知识，关键是免费啊哈哈。
+    </p>
+    <p style="text-indent:2em">
+        最后感谢Github，感谢Jekyll，感谢Ruby以及这个博客的作者<a href="https://github.com/Huxpro">Huxpro</a>，特别感谢。
+    </p>
+
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
+    <blockquote>
+        Can you remember how many slices of bread you've eaten so far?
+        <br><p align = "right">——Dio Brando</p>
+    </blockquote>
+    <p>
+        Hello everyone, I am the technical director of Unity in CaoPu area. Welcome to my blog. 
+        I hope my blog can bring you happiness, if it can't, kick my ass if u can.
+    
+    <br>
+        Just kidding :),It took me two days to set up the blog，I don't like to use commercial blogs because there are advertisement and you can't customize them,
+       one dat i found that Github Page can satisfy my request.But it need Jekyll and Ruby.Fortunately, it's not too hard to build and I have also learned the corresponding web knowledge before.
+       one more important is that it is free!
+    
+    <br>
+        Thanks to Github, Jekyll, Ruby and the author of this blog<a href="https://github.com/Huxpro">Huxpro</a>, Thank you very much.
+    
+    </p>
+</div>
+
+
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    function onLanChange(index){
+        if(index == 0){
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }else{
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        }
+    }
+    onLanChange(0);
+</script>
+
+
+
+{% if site.duoshuo_username %}
+<!-- 多说评论框 start -->
+<div class="comment">
+    <div class="ds-thread"
+    {% if site.duoshuo_username == "huxblog" %}
+        data-thread-id="1187623191091085319"
+    {% else %}
+        data-thread-key="{{site.duoshuo_username}}/about"
+    {% endif %}
+
+    data-title="{{page.title}}"
+    data-url="{{site.url}}/about/"></div>
+</div>
+<!-- 多说评论框 end -->
+
+<!-- Duoshuo hacking -->
+<input id="dsUser" type="hidden" value="{{site.duoshuo_username}}"  />
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User hacking by Hux
+    var _user = document.getElementById('dsUser').value;
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+{% endif %}
+
+
+{% if site.disqus_username %}
+<!-- disqus 评论框 start -->
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus_username}}";
+    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}
