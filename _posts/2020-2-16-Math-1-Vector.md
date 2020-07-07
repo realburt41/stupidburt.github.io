@@ -5,6 +5,7 @@ subtitle:   "向量、叉积、点积....."
 date:       2020-2-16
 author:     "Burt"
 header-img: "img/in-post/Math/Math-bg.jpg"
+mathjax: true
 tags:
     - Math
 ---
