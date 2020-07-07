@@ -156,11 +156,11 @@ kA = （4(1)，4(2)，4(3)） = （4，8，12）
 
 A（a<sub>1</sub>，a<sub>2</sub>，a<sub>3</sub>），B（b<sub>1</sub>，b<sub>2</sub>，b<sub>3</sub>）
 
-$A \cdot b = a_{1} \cdot b_{1} + a_{2} \cdot b_{2} + a_{3} \cdot b_{3}	$
+$A \cdot B = a_{1} \cdot b_{1} + a_{2} \cdot b_{2} + a_{3} \cdot b_{3}	$
 
 或者
 
-$A \cdot b = A_{abs} \cdot B_{abs} \cdot \cos\theta	$
+$A \cdot B = A_{abs} \cdot B_{abs} \cdot \cos\theta	$
 
 可以看出他的结果是**标量**
 
@@ -198,7 +198,7 @@ Vector3.Dot(Transform.up,target.position-tranform.position)
 **PS**
 
 - $\theta = \arccos \frac{A \cdot B}{A_{abs} \cdot B_{abs}}$
-- $A \cdot b = A_{abs} \cdot B_{abs} \cdot \cos\theta	$
+- $A \cdot B = A_{abs} \cdot B_{abs} \cdot \cos\theta	$
 - 向量大小并不影响点乘结果的符号。
 - 零向量与任何向量的点乘都是0，所以可以看作零向量与任何向量都垂直
 
@@ -228,7 +228,7 @@ A **×** B =  （a<sub>2</sub> **·** b<sub>3 </sub> - a<sub>3</sub> **·** b<su
 
 
 
-叉积最重要的应用就是创建垂直于平面、三角形或多边形的向量，即法线
+叉积最重要的应用就是创建垂直于平面、三角形或多边形的向量，即法线。
 
 
 
