@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "角色控制（一）"
+title:      "角色控制之其一"
 subtitle:   "让你的小人动起来"
 date:       2020-2-17
 author:     "Burt"
