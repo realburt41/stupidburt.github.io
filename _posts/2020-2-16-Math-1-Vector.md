@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "游戏开发中的向量"
+title:      "3D游戏数学之其一"
 subtitle:   "向量、叉积、点积....."
 date:       2020-2-16
 author:     "Burt"
