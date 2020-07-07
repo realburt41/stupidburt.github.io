@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "游戏摄像机控制"
+title:      "游戏摄像机控制之其一"
 subtitle:   "第三人称相机基本功能"
 date:       2020-2-15
 author:     "Burt"
