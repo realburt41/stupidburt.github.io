@@ -5,6 +5,7 @@ subtitle:   "第三人称相机基本功能"
 date:       2020-2-15
 author:     "Burt"
 header-img: "img/in-post/Camera/Camera-bg.jpg"
+catalog: true
 tags:
     - Unity
     - Camera
