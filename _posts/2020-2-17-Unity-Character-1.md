@@ -5,7 +5,7 @@ subtitle:   "让你的小人动起来"
 date:       2020-2-17
 author:     "Burt"
 header-img:  "img/in-post/Character/Character-bg.jpg"
-header-mask: 0.3
+header-mask: 1
 tags:
     - Unity
     - Charater
