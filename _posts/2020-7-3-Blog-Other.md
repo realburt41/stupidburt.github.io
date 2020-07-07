@@ -35,4 +35,11 @@ tags:
 
 
 
+#### 更新
+
+博客作者已经贴心的帮我们实现了这一功能，只需要在 post 顶上加 `mathjax: true`即可
+
+
+
+
 Reference：https://zhuanlan.zhihu.com/p/36302775
