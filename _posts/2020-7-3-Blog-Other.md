@@ -39,6 +39,8 @@ tags:
 
 博客作者已经贴心的帮我们实现了这一功能，只需要在 post 顶上加 `mathjax: true`即可
 
+#### 测试测试
+<a href="temp/index.html">链接</a>
 
 
 
