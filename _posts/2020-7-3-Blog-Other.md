@@ -58,7 +58,6 @@ xxxxx完了
 下面一起来看一下效果吧：
 
 <body>
-    <img src="/_posts/pbr.jpg"  alt="上海鲜花港 - 郁金香" />
 <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
