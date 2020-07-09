@@ -1,15 +1,3 @@
----
-layout:     post
-title:      "博客搭建"
-subtitle:   "遇到的一些问题"
-date:       2020-7-3
-author:     "Burt"
-header-img: "img/in-post/Camera/Camera-bg.jpg"
-tags:
-    - Blog
----
-
-
 
 <head>
     <meta charset="utf-8">
@@ -24,6 +12,21 @@ tags:
       }
     </script>
 </head>
+
+
+---
+layout:     post
+title:      "博客搭建"
+subtitle:   "遇到的一些问题"
+date:       2020-7-3
+author:     "Burt"
+header-img: "img/in-post/Camera/Camera-bg.jpg"
+tags:
+   - Blog
+---
+
+
+
 
 
 
@@ -67,6 +70,7 @@ tags:
 xxxxx完了
 
 下面一起来看一下效果吧：
+
 
 <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
