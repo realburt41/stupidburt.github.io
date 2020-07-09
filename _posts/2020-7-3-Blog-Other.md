@@ -46,34 +46,34 @@ xxxxx完了
 
 下面一起来看一下效果吧：
 <html lang="en-us">
-    <head>
-      <meta charset="utf-8">
+
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | RimLight</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="/cs/unity/style.css">
-    <script src="/js/unity/UnityProgress.js"></script>
-    <script src="/js/unity/UnityLoader.js"></script>
+    <title>Unity3D 俄罗斯方块游戏</title>
+    <link rel="shortcut icon" href="/assets/Game/Game_Tetris/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="/assets/Game/Game_Tetris/TemplateData/style.css">
+    <script src="/assets/Game/Game_Tetris/TemplateData/UnityProgress.js"></script>  
+    <script src="/assets/Game/Game_Tetris/Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "/_unity.json", {onProgress: UnityProgress});
-      function changeSceneName(){
+      var unityInstance = UnityLoader.instantiate("gameContainer", "/assets/Game/Game_Tetris/Build/Game_Tetris.json", {onProgress: UnityProgress});
+        function changeSceneName(){
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
     </script>
   </head>
-
-<body>
-<div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">RimLight</div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">全屏</div>
       </div>
-</div>
-</body>
+    </div>
 
 
+  </body>
 </html>
 
 
