@@ -21,7 +21,7 @@ permalink: /Game_Tetris
     <script src="/assets/Game/Game_Tetris/TemplateData/UnityProgress.js"></script>  
     <script src="/assets/Game/Game_Tetris/Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "/assets/Game/Game_Tetris/Build/_unity.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "/assets/Game/Game_Tetris/Build/Game_Tetris.json", {onProgress: UnityProgress});
         function changeSceneName(){
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
