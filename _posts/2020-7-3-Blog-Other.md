@@ -14,16 +14,17 @@ tags:
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
+    <link rel="stylesheet" href="realburt41.github.io/unity/TemplateData/style.css">
+    <script src="realburt41.github.io/unity/TemplateData/UnityProgress.js"></script>
+    <script src="realburt41.github.io/unity/Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/_unity.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "realburt41.github.io/unity/Build/_unity.json", {onProgress: UnityProgress});
       function changeSceneName(){
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
     </script>
 </head>
+
 
 
 
@@ -59,8 +60,6 @@ tags:
 
 博客作者已经贴心的帮我们实现了这一功能，只需要在 post 顶上加 `mathjax: true`即可
 
-#### 测试测试
-<a href="https://realburt41.github.io/temp/index.html">链接</a>
 
 
 #### 测试
