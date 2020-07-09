@@ -11,17 +11,6 @@ tags:
 
 
 
-<head>
-    <link rel="stylesheet" href="/cs/unity/style.css">
-    <script src="/js/unity/UnityProgress.js"></script>
-    <script src="/js/unity/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "/_unity.json", {onProgress: UnityProgress});
-      function changeSceneName(){
-         unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
-      }
-    </script>
-  </head>
 
 
 
@@ -62,6 +51,18 @@ tags:
 xxxxx完了
 
 下面一起来看一下效果吧：
+<html lang="en-us">
+    <head>
+    <link rel="stylesheet" href="/cs/unity/style.css">
+    <script src="/js/unity/UnityProgress.js"></script>
+    <script src="/js/unity/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "/_unity.json", {onProgress: UnityProgress});
+      function changeSceneName(){
+         unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
+      }
+    </script>
+  </head>
 
 <body>
 <div class="webgl-content">
@@ -75,7 +76,7 @@ xxxxx完了
 </body>
 
 
-
+</html>
 
 
 Reference：https://zhuanlan.zhihu.com/p/36302775
