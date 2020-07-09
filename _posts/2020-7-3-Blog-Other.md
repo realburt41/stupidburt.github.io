@@ -9,16 +9,17 @@ tags:
     - Blog
 ---
 <head>
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
+    <link rel="stylesheet" href="/css/unity/style.css">
+    <script src="/js/unity/UnityProgress.js"></script>
+    <script src="/js/unity/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/_unity.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "/_unity.json", {onProgress: UnityProgress});
       function changeSceneName(){
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
     </script>
 </head>
+
 
 
 
