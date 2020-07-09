@@ -8,37 +8,25 @@ header-img: "img/in-post/Camera/Camera-bg.jpg"
 tags:
     - Blog
 ---
+
+
+
 <head>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="/css/unity/style.css">
+    <link rel="stylesheet" href="/cs/unity/style.css">
     <script src="/js/unity/UnityProgress.js"></script>
     <script src="/js/unity/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "/_unity.json", {onProgress: UnityProgress});
-=======
-    <link rel="shortcut icon" href="/_posts/TemplateData/favicon.ico">
-    <link rel="stylesheet" href="/_posts/TemplateData/style.css">
-    <script src="/_posts/TemplateData/UnityProgress.js"></script>
-    <script src="/_posts/Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "/_posts/Build/_unity.json", {onProgress: UnityProgress});
->>>>>>> 0980c4c145a76dbf80cd18c3646d405d3ca7389b
       function changeSceneName(){
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
     </script>
-</head>
-
-<<<<<<< HEAD
+  </head>
 
 
 
 
 
-
-
-=======
->>>>>>> 0980c4c145a76dbf80cd18c3646d405d3ca7389b
 #### 让GitHub Page支持Latex公式
 
 笔者用的是Typora，
