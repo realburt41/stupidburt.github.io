@@ -11,6 +11,26 @@ tags:
 
 
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/_unity.json", {onProgress: UnityProgress});
+      function changeSceneName(){
+         unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
+      }
+    </script>
+</head>
+
+
+
+
+
+
+
 #### 让GitHub Page支持Latex公式
 
 笔者用的是Typora，
@@ -38,6 +58,25 @@ tags:
 #### 更新
 
 博客作者已经贴心的帮我们实现了这一功能，只需要在 post 顶上加 `mathjax: true`即可
+
+
+
+#### 测试
+
+xxxxx完了
+
+下面一起来看一下效果吧：
+
+<div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">RimLight</div>
+      </div>
+</div>
+
+
 
 
 
