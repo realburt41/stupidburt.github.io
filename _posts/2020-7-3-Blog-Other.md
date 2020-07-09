@@ -1,4 +1,3 @@
-
 ---
 layout:     post
 title:      "博客搭建"
@@ -10,8 +9,6 @@ tags:
     - Blog
 ---
 
-<meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="/unity/TemplateData/style.css">
     <script src="/unity/TemplateData/UnityProgress.js"></script>
     <script src="/unity/Build/UnityLoader.js"></script>
@@ -20,7 +17,7 @@ tags:
       function changeSceneName(){
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
-</script>
+    </script>
 
 
 
