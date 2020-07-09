@@ -9,12 +9,12 @@ tags:
     - Blog
 ---
 <head>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
+    <link rel="shortcut icon" href="/_posts/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="/_posts/TemplateData/style.css">
+    <script src="/_posts/TemplateData/UnityProgress.js"></script>
+    <script src="/_posts/Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/_unity.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "/_posts/Build/_unity.json", {onProgress: UnityProgress});
       function changeSceneName(){
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
