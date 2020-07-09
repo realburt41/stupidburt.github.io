@@ -7,7 +7,7 @@ date:       2020-7-3
 author:     "Burt"
 header-img: "img/in-post/Camera/Camera-bg.jpg"
 tags:
-   - Blog
+- Blog
 ---
 
 <meta charset="utf-8">
