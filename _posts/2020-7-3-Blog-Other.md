@@ -9,6 +9,7 @@ tags:
     - Blog
 ---
 <head>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
@@ -18,7 +19,7 @@ tags:
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
     </script>
-</head>
+ </head>
 
 
 
