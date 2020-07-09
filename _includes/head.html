@@ -60,6 +60,18 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/_unity.json", {onProgress: UnityProgress});
+      function changeSceneName(){
+         unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
+      }
+    </script>
+
+    
 
     <!-- ga & ba script hoook -->
     <script></script>
