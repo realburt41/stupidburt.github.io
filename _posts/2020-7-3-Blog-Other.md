@@ -48,10 +48,6 @@ xxxxx完了
 <html lang="en-us">
 
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity3D 俄罗斯方块游戏</title>
-    <link rel="shortcut icon" href="/assets/Game/Game_Tetris/TemplateData/favicon.ico">
     <link rel="stylesheet" href="/assets/Game/Game_Tetris/TemplateData/style.css">
     <script src="/assets/Game/Game_Tetris/TemplateData/UnityProgress.js"></script>  
     <script src="/assets/Game/Game_Tetris/Build/UnityLoader.js"></script>
@@ -71,8 +67,6 @@ xxxxx完了
         <div class="title">全屏</div>
       </div>
     </div>
-
-
   </body>
 </html>
 
