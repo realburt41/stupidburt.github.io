@@ -62,7 +62,7 @@ xxxxx完了
 
 下面一起来看一下效果吧：
 
-
+<body>
 <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
@@ -71,7 +71,7 @@ xxxxx完了
         <div class="title">RimLight</div>
       </div>
 </div>
-
+</body>
 
 
 
