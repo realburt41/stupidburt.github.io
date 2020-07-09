@@ -60,7 +60,7 @@ xxxxx完了
   </head>
   <body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 760px; height: 440px"></div>
+      <div id="gameContainer" style="width: 740px; height: 460px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
