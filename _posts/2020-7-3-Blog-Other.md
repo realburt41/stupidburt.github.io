@@ -47,6 +47,10 @@ xxxxx完了
 下面一起来看一下效果吧：
 <html lang="en-us">
     <head>
+      <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | RimLight</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="/cs/unity/style.css">
     <script src="/js/unity/UnityProgress.js"></script>
     <script src="/js/unity/UnityLoader.js"></script>
