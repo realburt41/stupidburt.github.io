@@ -8,6 +8,7 @@ header-img: "img/in-post/Camera/Camera-bg.jpg"
 tags:
     - Blog
 ---
+
 <head>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -19,7 +20,7 @@ tags:
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
     </script>
- </head>
+</head>
 
 
 
