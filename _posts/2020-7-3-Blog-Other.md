@@ -10,10 +10,10 @@ tags:
 ---
 
 <head>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
+    <link rel="shortcut icon" href="/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="/TemplateData/style.css">
+    <script src="/TemplateData/UnityProgress.js"></script>
+    <script src="/Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/_unity.json", {onProgress: UnityProgress});
       function changeSceneName(){
