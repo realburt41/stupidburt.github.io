@@ -8,7 +8,7 @@ header-img: "img/in-post/Camera/Camera-bg.jpg"
 tags:
     - Blog
 ---
-
+<head>
     <link rel="stylesheet" href="/unity/TemplateData/style.css">
     <script src="/unity/TemplateData/UnityProgress.js"></script>
     <script src="/unity/Build/UnityLoader.js"></script>
@@ -18,7 +18,7 @@ tags:
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
     </script>
-
+</head>
 
 
 
