@@ -4,15 +4,23 @@
 <div id="gitalk-container"></div>     
 <script type="text/javascript">
     var gitalk = new Gitalk({
- 
-    // gitalk的主要参数
-        clientID: '26f8df92e2459d56011f',
-        clientSecret: '39a2a849149dabbbe051da4155217c9bb1f08e12',
-        repo: 'realbrt41.github.io',
-        owner: 'realbrt41',
-        admin: ['realburt41'],
-        
-    });
-    gitalk.render('gitalk-container');
+clientID : '{{ 26f8df92e2459d56011f }}',
+clientSecret: '{{ 39a2a849149dabbbe051da4155217c9bb1f08e12 }}',
+repo : '{{ realbrt41.github.io }}',
+owner : '{{ realbrt41 }}',
+admin : ['{{ realbrt41 }}'],
+
+{%- if theme.gitalk.language == '' %}
+language: window.navigator.language || window.navigator.userLanguage,
+{% else %}
+language: '{{ theme.gitalk.language }}',
+{%- endif %}
+distractionFreeMode: {{ theme.gitalk.distraction_free_mode }}
+});
+gitalk.render('gitalk-container');
 </script> 
 <!-- Gitalk end -->
+
+
+
+
