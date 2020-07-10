@@ -45,34 +45,6 @@ kramdown:
     input: GFM                            # use Github Flavored Markdown !important
 
 
-# ---------------- #
-#      Comments    #
-# ---------------- #
-# support provider: disqus, gitment, gitalk
-comments_provider: gitalk
-# !!!重要!!! 请修改下面这些信息为你自己申请的
-# !!!Important!!! Please modify infos below to yours
-# https://disqus.com
-#disqus:
-    #username: 764424567
-# https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: realburt41
-    repo: BlogRemark
-    oauth:
-        client_id: 26f8df92e2459d56011f
-        client_secret: 39a2a849149dabbbe051da4155217c9bb1f08e12
-# https://github.com/gitalk/gitalk#install
-gitalk:
-    owner: realburt41
-    repo: BlogRemark
-    clientID: 26f8df92e2459d56011f
-    clientSecret: 39a2a849149dabbbe051da4155217c9bb1f08e12
-# 在使用其它评论组件时可点击显示 Disqus
-lazy_load_disqus : true
-
-
-
 
 
 # Analytics settings
