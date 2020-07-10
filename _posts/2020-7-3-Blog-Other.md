@@ -45,36 +45,34 @@ tags:
 xxxxx完了
 
 下面一起来看一下效果吧：
+
+
 <html lang="en-us">
-    <head>
-      <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | RimLight</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="/cs/unity/style.css">
-    <script src="/js/unity/UnityProgress.js"></script>
-    <script src="/js/unity/UnityLoader.js"></script>
+
+  <head>
+    <link rel="stylesheet" href="/assets/Unity/Shader/TemplateData/style.css">
+    <script src="/assets/Unity/Shader/TemplateData/UnityProgress.js"></script>
+    <script src="/assets/Unity/Shader/Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "/_unity.json", {onProgress: UnityProgress});
-      function changeSceneName(){
-         unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
-      }
+      var unityInstance = UnityLoader.instantiate("unityContainer", "/assets/Unity/Shader/Build/Shader.json", {onProgress: UnityProgress});
     </script>
   </head>
 
-<body>
-<div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 700px; height: 470px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">RimLight</div>
+        <div class="title">ShaderShow</div>
       </div>
-</div>
-</body>
-
-
+    </div>
+  </body>
 </html>
+
+
+
+
 
 
 Reference：https://zhuanlan.zhihu.com/p/36302775
