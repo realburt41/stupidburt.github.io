@@ -2,7 +2,8 @@
     <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <div id="gitalk-container"></div>     
-    <script type="text/javascript">
+     <script src="/js/md5.min.js"></script>
+   <script type="text/javascript">
         var gitalk = new Gitalk({
         // gitalk的主要参数
             clientID: '26f8df92e2459d56011f',
@@ -10,6 +11,7 @@
             repo: 'BlogRemark',
             owner: 'realburt41',
             admin: ['realburt41'],
+            id: md5(location.pathname),
         });
         gitalk.render('gitalk-container');
     </script> 
