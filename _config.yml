@@ -57,14 +57,14 @@ comments_provider: gitalk
     #username: 764424567
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: Burt
+    owner: realburt41
     repo: BlogRemark
     oauth:
         client_id: 26f8df92e2459d56011f
         client_secret: 39a2a849149dabbbe051da4155217c9bb1f08e12
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: Burt
+    owner: realburt41
     repo: BlogRemark
     clientID: 26f8df92e2459d56011f
     clientSecret: 39a2a849149dabbbe051da4155217c9bb1f08e12
