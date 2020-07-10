@@ -104,3 +104,5 @@ public class TestJS : MonoBehaviour
 
 真的是好麻烦，但是官方说这样会更安全，那就这样吧
 
+
+{% include gitalk.html %} 
