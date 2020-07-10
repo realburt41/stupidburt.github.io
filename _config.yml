@@ -54,7 +54,13 @@ ba_track_id:
 ga_track_id: ''            # Format: UA-xxxxxx-xx
 ga_domain: 
 
-
+gitalk:
+    owner: realburt
+    repo: BlogRemark
+    clientID: 26f8df92e2459d56011f
+    clientSecret: 39a2a849149dabbbe051da4155217c9bb1f08e12
+    
+    
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
