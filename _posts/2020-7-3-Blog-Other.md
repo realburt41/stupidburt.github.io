@@ -48,30 +48,12 @@ xxxxx完了
 
 
 <html lang="en-us">
-
   <head>
-<<<<<<< HEAD
     <link rel="stylesheet" href="/assets/Unity/Shader/TemplateData/style.css">
-    <script src="/assets/Unity/Shader/TemplateData/UnityProgress.js"></script>
+    <script src="/assets/Unity/Shader/TemplateData/UnityProgress.js"></script>  
     <script src="/assets/Unity/Shader/Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "/assets/Unity/Shader/Build/Shader.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 700px; height: 470px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">ShaderShow</div>
-=======
-    <link rel="stylesheet" href="/assets/Game/Game_Tetris/TemplateData/style.css">
-    <script src="/assets/Game/Game_Tetris/TemplateData/UnityProgress.js"></script>  
-    <script src="/assets/Game/Game_Tetris/Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("gameContainer", "/assets/Game/Game_Tetris/Build/Game_Tetris.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("gameContainer", "/assets/Unity/Shader/Build/Shader.json", {onProgress: UnityProgress});
         function changeSceneName(){
          unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
       }
@@ -83,18 +65,11 @@ xxxxx完了
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
->>>>>>> 6d9b16ba2e84fd5a875e2ab499e350740351db24
       </div>
     </div>
   </body>
 </html>
-<<<<<<< HEAD
 
-
-
-
-=======
->>>>>>> 6d9b16ba2e84fd5a875e2ab499e350740351db24
 
 
 Reference：https://zhuanlan.zhihu.com/p/36302775
