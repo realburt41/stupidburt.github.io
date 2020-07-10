@@ -103,3 +103,10 @@ public class TestJS : MonoBehaviour
 相应的打包出来的index.html就不用再去改了。
 
 真的是好麻烦，但是官方说这样会更安全，那就这样吧
+
+
+
+<!-- Comments -->
+<div class="comment">
+    {% include comments.html %}
+</div>
