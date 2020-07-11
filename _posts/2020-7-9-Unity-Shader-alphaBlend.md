@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Burtの奇妙冒险"
+title:      "Burtの奇妙冒险（一）"
 subtitle:   "今天是遇到的是透明度混合！"
 date:       2020-7-11
 author:     "Burt"
