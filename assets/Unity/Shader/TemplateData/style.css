@@ -1,6 +1,5 @@
 .webgl-content * {border: 0; margin: 0; padding: 0}
-
-.webgl-content {position: relative;top: 10%}
+.webgl-content {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
 
 .webgl-content .logo, .progress {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
 .webgl-content .logo {background: url('progressLogo.Light.png') no-repeat center / contain; width: 154px; height: 130px;}
@@ -16,8 +15,4 @@
 .webgl-content .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;}
 .webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
 .webgl-content .footer .title {margin-right: 10px; float: right;}
-<<<<<<< HEAD:assets/Unity/Shader/TemplateData/style.css
-.webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;margin-right:5px;}
-=======
-.webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;margin-right:5px;}
->>>>>>> 6d9b16ba2e84fd5a875e2ab499e350740351db24:assets/Game/Game_Tetris/TemplateData/style.css
+.webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}

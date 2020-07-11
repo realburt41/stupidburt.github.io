@@ -40,35 +40,9 @@ tags:
 
 
 
-#### 测试
-
-xxxxx完了
-
-下面一起来看一下效果吧：
 
 
-<html lang="en-us">
-  <head>
-    <link rel="stylesheet" href="/assets/Unity/Shader/TemplateData/style.css">
-    <script src="/assets/Unity/Shader/TemplateData/UnityProgress.js"></script>  
-    <script src="/assets/Unity/Shader/Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("gameContainer", "/assets/Unity/Shader/Build/Shader.json", {onProgress: UnityProgress});
-        function changeSceneName(){
-         unityInstance.SendMessage("SceneManager","setSceneName","RimLight_Lambert");
-      }
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 700px; height: 470px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-      </div>
-    </div>
-  </body>
-</html>
+
 
 
 
