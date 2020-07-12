@@ -36,13 +36,13 @@ tags:
 
 涉及隐身（透明）就要关闭深度测试，不然就看不到隐身Cube后面的东西了
 
-~~~
+~~~c
 ZWrite Off //关闭深度测试
 ~~~
 
 慢慢隐身就不是alpha test，而是alpha blend
 
-~~~
+~~~c
 blend SrcAlpha OneMinusSrcAlpha //传统透明度
 ~~~
 
@@ -56,7 +56,7 @@ blend SrcAlpha OneMinusSrcAlpha //传统透明度
 
 其实透明度重点在准备那里，主体只需要在Fragment Shader控制Alpha值就行了
 
-~~~
+~~~c
 fixed4 frag (v2f i) : SV_Target
 {
 	....
@@ -72,7 +72,7 @@ fixed4 frag (v2f i) : SV_Target
 
 （以便我Copy）
 
-~~~
+~~~c
 Shader "Burt/AlphaBlend"
 {
     Properties
