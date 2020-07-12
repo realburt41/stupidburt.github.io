@@ -28,7 +28,7 @@ tags:
 
 改变Shader的Tag，告诉Shader他是透明物体，并改变渲染顺序
 
-~~~
+~~~c
  Tags { "RenderType"="Transparent" "Queue" = "Transparent"}
 ~~~
 
