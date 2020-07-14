@@ -28,7 +28,7 @@ tags:
 
 改变Shader的Tag，告诉Shader他是透明物体，并改变渲染顺序
 
-~~~
+~~~c
  Tags { "RenderType"="Transparent" "Queue" = "Transparent"}
 ~~~
 
@@ -36,13 +36,13 @@ tags:
 
 涉及隐身（透明）就要关闭深度测试，不然就看不到隐身Cube后面的东西了
 
-~~~
+~~~c
 ZWrite Off //关闭深度测试
 ~~~
 
 慢慢隐身就不是alpha test，而是alpha blend
 
-~~~
+~~~c
 blend SrcAlpha OneMinusSrcAlpha //传统透明度
 ~~~
 
@@ -56,7 +56,7 @@ blend SrcAlpha OneMinusSrcAlpha //传统透明度
 
 其实透明度重点在准备那里，主体只需要在Fragment Shader控制Alpha值就行了
 
-~~~
+~~~c
 fixed4 frag (v2f i) : SV_Target
 {
 	....
@@ -68,12 +68,44 @@ fixed4 frag (v2f i) : SV_Target
 
 
 
+#### 改进
+
+然鹅这样的透明混合有点奇怪，看不到Cube内部的细节。所以为了增加Cube内部细节，需要两个Pass，一个渲染外面，一个渲染里面，本来需要两套贴图，但是为了偷懒就只用一套
+
+
+
+粉Cube被我扒了衣服，孤零零的躲在角落哭泣
+
+
+
+第一个Pass渲染内部，剔除外面，其余代码一样
+
+~~~c
+Cull Front
+~~~
+
+第二个Pass渲染外部，剔除后面，其实不写这个Cull也没关系，不写默认就是Back
+
+~~~c
+Cull Back
+~~~
+
+这一次再给粉Cube穿上，他问我为啥能看到他的内脏，还给他的内脏加了个图案
+
+别问，问就是装逼
+
+
+
+
+
+
+
 #### 完整代码
 
 （以便我Copy）
 
-~~~
-Shader "Burt/AlphaBlend"
+~~~c
+Shader "Burt/Alpha"
 {
     Properties
     {
@@ -84,11 +116,14 @@ Shader "Burt/AlphaBlend"
     {
         Tags { "RenderType"="Transparent" "Queue" = "Transparent"}
 
-		ZWrite Off
-		blend SrcAlpha OneMinusSrcAlpha
-
         Pass
         {
+
+			Cull Front
+
+			ZWrite Off
+			blend SrcAlpha OneMinusSrcAlpha
+
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
@@ -135,7 +170,71 @@ Shader "Burt/AlphaBlend"
 				
 				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
 
-				fixed3 diffuse = _LightColor0.rgb * col * max(0, dot(worldNormal, worldLightDir)) + ambient;
+				fixed3 diffuse = _LightColor0.rgb * col * (max(0, dot(worldNormal, worldLightDir)) * 0.5 + 0.5) + ambient;
+				
+
+                return fixed4(diffuse,_AlphaScale);
+            }
+            ENDCG
+        }
+
+
+
+		Pass
+        {
+
+			Cull Back
+
+			ZWrite Off
+			blend SrcAlpha OneMinusSrcAlpha
+
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+
+            #include "UnityCG.cginc"
+				#include "Lighting.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+				float3 normal : NORMAL;
+                float2 uv : TEXCOORD0;
+            };
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+				float3 worldNormal : TEXCOORD1;
+				fixed3 worldPos : TEXCOORD2;
+                float4 vertex : SV_POSITION;
+            };
+
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+			float _AlphaScale;
+
+            v2f vert (appdata v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+				o.worldNormal = UnityObjectToWorldNormal(v.normal);
+				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+				fixed3 worldNormal = normalize(i.worldNormal);
+				fixed3 worldLightDir = normalize(UnityWorldSpaceLightDir(i.worldPos));
+				
+                // sample the texture
+                fixed3 col = tex2D(_MainTex, i.uv).rgb;
+				
+				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
+
+				fixed3 diffuse = _LightColor0.rgb * col * (max(0, dot(worldNormal, worldLightDir)) * 0.5 + 0.5) + ambient;
 				
 
                 return fixed4(diffuse,_AlphaScale);
@@ -144,7 +243,10 @@ Shader "Burt/AlphaBlend"
         }
     }
 }
+
 ~~~
+
+
 
 
 
@@ -172,3 +274,9 @@ Shader "Burt/AlphaBlend"
     </div>
   </body>
 </html>
+
+
+
+
+
+Reference：《Shader入门精要》

@@ -24,7 +24,7 @@ tags:
 
 一开始我天真的以为，JS调用Unity一句话就可以搞定
 
-~~~
+~~~javascript
 //JS里
 untiyInstance.SendMessage("场景中的物体","方法名","参数");
 ~~~
@@ -33,14 +33,14 @@ untiyInstance.SendMessage("场景中的物体","方法名","参数");
 
 更正：
 
-~~~
+~~~c#
  //unity里
  Application.ExternalCall("JS方法");
 ~~~
 
 然后JS里要实现这个方法
 
-~~~
+~~~javascript
 //JS里
 function JS方法(){
 	untiyInstance.SendMessage("场景中的物体","方法名","参数");
@@ -55,7 +55,7 @@ function JS方法(){
 
 首先需要写一个JS的脚本，主要是调用mergeInto();方法，第一个参数不用变，第二个参数就是JS的方法集合。写完之后将这个文件的后缀改为.jslib，放到Unity里的Plugins文件夹中
 
-~~~
+~~~javascript
 mergeInto(LibraryManager.library, 
 {
  
@@ -77,7 +77,7 @@ mergeInto(LibraryManager.library,
 
 Unity里调用则是
 
-~~~
+~~~c#
 using UnityEngine;
 using System.Runtime.InteropServices;
  
