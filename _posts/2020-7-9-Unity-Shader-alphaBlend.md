@@ -280,6 +280,4 @@ Shader "Burt/Alpha"
 
 
 #### Reference:
-
->>>>>>> f92affb5e90b4392e81262ff891b26593842242f
 《Shader入门精要》
