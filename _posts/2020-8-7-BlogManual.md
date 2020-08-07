@@ -5,7 +5,7 @@ subtitle:   "这个是怎么弄的..."
 date:       2020-8-7
 author:     "Burt"
 header-img: "img/in-post/Blog/BlogManual-bg.jpg"
-header-mask: 1
+header-mask: 0.5
 tags:
     - Blog
 ---

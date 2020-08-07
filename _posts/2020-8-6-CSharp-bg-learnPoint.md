@@ -5,7 +5,7 @@ subtitle:   "今天你学习了吗"
 date:       2020-8-6
 author:     "Burt"
 header-img: "img/in-post/CSharp/CSharp-bg.jpg"
-header-mask: 0.5
+header-mask: 0.3
 tags:
     - C#
 ---
