@@ -18,15 +18,15 @@ tags:
 
 在此记录C#知识点，不管是会的还是不会的，都加强巩固，自强不息
 
-References:
 
-https://zhuanlan.zhihu.com/p/161736640
+
+---
 
 
 
 ## 知识点
 
-1、拆箱与装箱
+##### 1、拆箱与装箱
 
 装箱：值类型隐式转换为object类型 或 由此值类型实现的任何接口类型 的过程
 
@@ -41,7 +41,7 @@ https://zhuanlan.zhihu.com/p/161736640
 
 
 
-2、string str = null与string str = "" 区别
+##### 2、string str = null与string str = "" 区别
 
 str = null表示空引用，不占空间
 
@@ -49,13 +49,13 @@ str = ""   表示初始化对象并为其分配空间
 
 
 
-3、ref和out 区别
+##### 3、ref和out 区别
 
 ...
 
 
 
-4、序列化与反序列化是什么
+##### 4、序列化与反序列化是什么
 
 序列化是将对象状态转换为可保持或传输的格式的过程
 
@@ -65,9 +65,27 @@ str = ""   表示初始化对象并为其分配空间
 
 
 
-5、sealed修饰符
+##### 5、sealed修饰符
+
+...
+
+
+
+
+
+
+
+## References:
+
+1. https://zhuanlan.zhihu.com/p/161736640
+
+
+
+
+
 
 
 
 
 待续...
+

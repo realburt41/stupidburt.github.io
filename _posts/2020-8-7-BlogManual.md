@@ -27,25 +27,25 @@ tags:
 
 ## 图片相关
 
-1、为图片增加一个黑色的mask
+##### 1、为图片增加一个黑色的mask
 
 ~~~js
 header-mask: 0.3
 ~~~
 
-2、Latex支持
+##### 2、Latex支持
 
 ~~~js
 mathjax: true
 ~~~
 
-3、不显示head picture
+##### 3、不显示head picture
 
 ~~~js
 header-style: text 
 ~~~
 
-4、图片路径
+##### 4、图片路径
 
 ~~~js
 "/img/in-post/..."
@@ -57,7 +57,7 @@ header-style: text
 
 ## Unity WebGL
 
-1、JS呼叫Unity
+##### 1、JS呼叫Unity
 
 JS：
 
