@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Shader知识点"
-subtitle:   "快看呐，多美的画呀"
+subtitle:   "这背景图片真好看"
 date:       2020-7-20
 author:     "Burt"
 header-img: "img/in-post/Shader/Shader-bg.jpg"
@@ -78,7 +78,7 @@ ZTEST将要渲染物体的深度与ZWRITE中写入的深度进行比较，符合
 
 
 
-## References:
+## References
 
 1. <https://blog.csdn.net/qq_29579137/article/details/84486003>
 2. <https://zhuanlan.zhihu.com/p/79800363>
