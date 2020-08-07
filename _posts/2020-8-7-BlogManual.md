@@ -24,25 +24,25 @@ tags:
 
 ## 二、图片相关
 
-##### 1、为图片增加一个黑色的mask
+### 1、为图片增加一个黑色的mask
 
 ~~~js
 header-mask: 0.3
 ~~~
 
-##### 2、Latex支持
+### 2、Latex支持
 
 ~~~js
 mathjax: true
 ~~~
 
-##### 3、不显示head picture
+### 3、不显示head picture
 
 ~~~js
 header-style: text 
 ~~~
 
-##### 4、图片路径
+### 4、图片路径
 
 ~~~js
 "/img/in-post/..."
@@ -54,7 +54,7 @@ header-style: text
 
 ## 三、Unity WebGL
 
-##### 1、JS呼叫Unity
+### 1、JS呼叫Unity
 
 JS：
 
@@ -70,7 +70,7 @@ Unity：
  Application.ExternalCall("JS方法");
 ~~~
 
-但是在Unity新版本不推荐这样做，而是使用这个<a href = "https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html">方法</a>。
+但是在Unity新版本不推荐这样做，而是使用这个[方法](https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html)。
 
 示例代码：
 
@@ -106,17 +106,29 @@ Unity：
 
 ## 四、博客文案
 
-##### 1、格式约定
+### 1、格式约定
 
-- 标题#
+- 标题：
   - 大标题 ##
-  - 小标题 #####
-- 标题间空格
-  - 大标题与大标题之间空两格
-  - 小标题与小标题之间无需空格
+  - 小标题 ###
+
 - 图片
   - 非自创图片说明文案：标明出处
   - 自创图片说明文案：自定义
+
+### 2、链接
+
+文字链接
+
+~~~markdown
+[文字](https://链接)
+~~~
+
+网站链接
+
+~~~markdown
+<https://realburt41.top>
+~~~
 
 
 
