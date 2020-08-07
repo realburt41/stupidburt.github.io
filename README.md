@@ -6,6 +6,4 @@
 
 #### find some funny thing..
 
-## If you like my Blog, just star it
-
-## And this is author [huxpro.github.io repo](https://github.com/Huxpro/huxpro.github.io)
+## the theme author:[huxpro](https://github.com/Huxpro)
