@@ -143,7 +143,7 @@ Unity：
 
 
 
-笔者使用的是gittalk，假如无法使用，记得查看OAuth Apps中的网站地址配置是否正确
+笔者使用的是gitalk，假如无法使用，记得查看OAuth Apps中的网站地址配置是否正确
 
 
 

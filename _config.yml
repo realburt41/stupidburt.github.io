@@ -1,9 +1,9 @@
 # Site settings
 title: Burt
-SEOTitle: Remember me
+SEOTitle: Burt的栖息地
 header-img: img/main-bg/home-bg.jpg
 email: 905646963@qq.com
-description: "自强不息"
+description: ""
 keyword: "Unity , Burt , realburt41" 
 url: "realburt41.top"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
