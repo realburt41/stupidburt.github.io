@@ -4,7 +4,7 @@ title:      "设计模式"
 subtitle:   "前人的宝贵经验"
 date:       2020-8-7
 author:     "Burt"
-header-img: "img/in-post/DP/DP-bg.png"
+header-img: "img/in-post/DP/DP-bg.jpg"
 tags:
     - C#
 ---

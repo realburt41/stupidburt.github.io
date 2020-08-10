@@ -1,13 +1,13 @@
 ---
 layout:     post
 title:      "U3D内建着色器源码剖析学习笔记（一）"
-subtitle:   "dd"
+subtitle:   ""
 date:       2020-8-10
 author:     "Burt"
 header-img: "img/in-post/Unity/Shader/ShaderLearnNote-bg.jpg"
 tags:
     - Note
-	- Shader
+    - Shader
 ---
 
 
