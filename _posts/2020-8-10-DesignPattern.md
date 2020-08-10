@@ -4,7 +4,7 @@ title:      "设计模式"
 subtitle:   "前人的经验"
 date:       2020-8-10
 author:     "Burt"
-header-img: "img/in-post/DP/DP-bg.jpg"
+header-img: "img/in-post/DP/DP-bg.png"
 tags:
     - Design Pattern
 	- C#
