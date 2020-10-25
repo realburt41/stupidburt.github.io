@@ -6,4 +6,4 @@
 
 #### find some funny thing..
 
-## the theme author:[huxpro](https://github.com/Huxpro)
+## the theme author: [huxpro](https://github.com/Huxpro)
