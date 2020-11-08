@@ -10,143 +10,44 @@ tags:
     - Blog
 ---
 
-
-
-
-
-## 前言
-
-整理一下该博客的使用方式
-
-
-
-
-
-## 使用指南
-
-
-### 一、图片相关
-
-
-#### 1.为图片增加一个黑色的mask
-
-~~~js
-header-mask: 0.3
-~~~
-
-#### 2.Latex支持
-
-~~~js
-mathjax: true
-~~~
-
-#### 3.不显示head picture
-
-~~~js
-header-style: text 
-~~~
-
-#### 4.图片路径
-
-~~~js
-"/img/in-post/..."
-~~~
-
-
-
-
-
-### 二、Unity WebGL
-
-#### 1.JS呼叫Unity
-
-JS：
-
-~~~javascript
-function JS方法(){
-	untiyInstance.SendMessage("场景中的物体","方法名","参数");
-}
-~~~
-
-Unity：
-
-~~~c#
- Application.ExternalCall("JS方法");
-~~~
-
-但是在Unity新版本不推荐这样做，而是使用这个[方法](https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html)。
-
-示例代码：
-
-~~~html
-<html lang="en-us">
-
-  <head>
-    <link rel="stylesheet" href="/assets/Unity/Shader/TemplateData/style.css">
-    <script src="/assets/Unity/Shader/TemplateData/UnityProgress.js"></script>  
-    <script src="/assets/Unity/Shader/Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("gameContainer", "/assets/Unity/Shader/Build/Shader.json", {onProgress: UnityProgress});
-        function changeSceneName(){
-         unityInstance.SendMessage("SceneManager","setSceneName","AlphaBlend");
-      }
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 700px; height: 470px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-      </div>
-    </div>
-  </body>
-</html>
-~~~
-
-
-
-
-
-### 三、博客文案
-
-#### 1.格式约定
-
-- 标题：
-  - 二标题 ## 文案
-  - 三标题 ### 一、文案
-- 四标题 #### 1.文案
-  
-- 图片
-  - 非自创图片说明文案：标明出处
-  - 自创图片说明文案：自定义
-
-#### 2.链接
-
-文字链接
-
-~~~markdown
-[文字](https://链接)
-~~~
-
-网站链接
-
-~~~markdown
-<https://realburt41.top>
-~~~
-
-
-
-
-
-### 四、博客评论
-
-
-
-笔者使用的是gitalk，假如无法使用，记得查看OAuth Apps中的网站地址配置是否正确
-
-
-
-
-
-待续...
+<section id="nice" data-tool="mdnice编辑器" data-website="https://www.mdnice.com" style="font-size: 16px; color: black; padding: 0 10px; line-height: 1.6; word-spacing: 0px; letter-spacing: 0px; word-break: break-word; word-wrap: break-word; text-align: left; font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><h2 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; border-bottom: 2px solid #7e753d; font-size: 1.3em;"><span class="prefix" style="display: none;"></span><span class="content" style="display: inline-block; font-weight: bold; background: #7e753d; color: #ffffff; padding: 3px 10px 1px; border-top-right-radius: 3px; border-top-left-radius: 3px; margin-right: 3px;">前言</span><span class="suffix"></span><span style="display: inline-block; vertical-align: bottom; border-bottom: 36px solid #efebe9; border-right: 20px solid transparent;"> </span></h2>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">整理一下该博客的使用方式</p>
+<h2 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; border-bottom: 2px solid #7e753d; font-size: 1.3em;"><span class="prefix" style="display: none;"></span><span class="content" style="display: inline-block; font-weight: bold; background: #7e753d; color: #ffffff; padding: 3px 10px 1px; border-top-right-radius: 3px; border-top-left-radius: 3px; margin-right: 3px;">使用指南</span><span class="suffix"></span><span style="display: inline-block; vertical-align: bottom; border-bottom: 36px solid #efebe9; border-right: 20px solid transparent;"> </span></h2>
+<h3 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;"><span class="prefix" style="display: none;"></span><span class="content">一、图片相关</span><span class="suffix" style="display: none;"></span></h3>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">1.为图片增加一个黑色的mask</span><span class="suffix" style="display: none;"></span></h4>
+<pre class="custom" data-tool="mdnice编辑器" style="margin-top: 10px; margin-bottom: 10px;"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #abb2bf; background: #282c34; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;">header-mask:&nbsp;<span class="hljs-number" style="color: #d19a66; line-height: 26px;">0.3</span><br></code></pre>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">2.Latex支持</span><span class="suffix" style="display: none;"></span></h4>
+<pre class="custom" data-tool="mdnice编辑器" style="margin-top: 10px; margin-bottom: 10px;"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #abb2bf; background: #282c34; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;">mathjax:&nbsp;<span class="hljs-literal" style="color: #56b6c2; line-height: 26px;">true</span><br></code></pre>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">3.不显示head picture</span><span class="suffix" style="display: none;"></span></h4>
+<pre class="custom" data-tool="mdnice编辑器" style="margin-top: 10px; margin-bottom: 10px;"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #abb2bf; background: #282c34; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;">header-style:&nbsp;text&nbsp;<br></code></pre>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">4.图片路径</span><span class="suffix" style="display: none;"></span></h4>
+<pre class="custom" data-tool="mdnice编辑器" style="margin-top: 10px; margin-bottom: 10px;"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #abb2bf; background: #282c34; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;"><span class="hljs-string" style="color: #98c379; line-height: 26px;">"/img/in-post/..."</span><br></code></pre>
+<h3 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;"><span class="prefix" style="display: none;"></span><span class="content">二、Unity WebGL</span><span class="suffix" style="display: none;"></span></h3>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">1.JS呼叫Unity</span><span class="suffix" style="display: none;"></span></h4>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">JS：</p>
+<pre class="custom" data-tool="mdnice编辑器" style="margin-top: 10px; margin-bottom: 10px;"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #abb2bf; background: #282c34; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;"><span class="hljs-function" style="line-height: 26px;"><span class="hljs-keyword" style="color: #c678dd; line-height: 26px;">function</span>&nbsp;<span class="hljs-title" style="color: #61aeee; line-height: 26px;">JS</span>方法(<span class="hljs-params" style="line-height: 26px;"></span>)</span>{<br>&nbsp;untiyInstance.SendMessage(<span class="hljs-string" style="color: #98c379; line-height: 26px;">"场景中的物体"</span>,<span class="hljs-string" style="color: #98c379; line-height: 26px;">"方法名"</span>,<span class="hljs-string" style="color: #98c379; line-height: 26px;">"参数"</span>);<br>}<br></code></pre>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">Unity：</p>
+<pre class="custom" data-tool="mdnice编辑器" style="margin-top: 10px; margin-bottom: 10px;"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #abb2bf; background: #282c34; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;">&nbsp;Application.ExternalCall(<span class="hljs-string" style="color: #98c379; line-height: 26px;">"JS方法"</span>);<br></code></pre>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">但是在Unity新版本不推荐这样做，而是使用这个<a href="https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html" style="text-decoration: none; word-wrap: break-word; font-weight: bold; color: #7e753d; border-bottom: 1px solid #7e753d;">方法</a>。</p>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">示例代码：</p>
+<pre class="custom" data-tool="mdnice编辑器" style="margin-top: 10px; margin-bottom: 10px;"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #abb2bf; background: #282c34; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;"><span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">html</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">lang</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"en-us"</span>&gt;</span><br><br>&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">head</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">link</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">rel</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"stylesheet"</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">href</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"/assets/Unity/Shader/TemplateData/style.css"</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">script</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">src</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"/assets/Unity/Shader/TemplateData/UnityProgress.js"</span>&gt;</span><span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">script</span>&gt;</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">script</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">src</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"/assets/Unity/Shader/Build/UnityLoader.js"</span>&gt;</span><span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">script</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">script</span>&gt;</span><span class="javascript" style="line-height: 26px;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-keyword" style="color: #c678dd; line-height: 26px;">var</span>&nbsp;unityInstance&nbsp;=&nbsp;UnityLoader.instantiate(<span class="hljs-string" style="color: #98c379; line-height: 26px;">"gameContainer"</span>,&nbsp;<span class="hljs-string" style="color: #98c379; line-height: 26px;">"/assets/Unity/Shader/Build/Shader.json"</span>,&nbsp;{<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">onProgress</span>:&nbsp;UnityProgress});<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-function" style="line-height: 26px;"><span class="hljs-keyword" style="color: #c678dd; line-height: 26px;">function</span>&nbsp;<span class="hljs-title" style="color: #61aeee; line-height: 26px;">changeSceneName</span>(<span class="hljs-params" style="line-height: 26px;"></span>)</span>{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unityInstance.SendMessage(<span class="hljs-string" style="color: #98c379; line-height: 26px;">"SceneManager"</span>,<span class="hljs-string" style="color: #98c379; line-height: 26px;">"setSceneName"</span>,<span class="hljs-string" style="color: #98c379; line-height: 26px;">"AlphaBlend"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">script</span>&gt;</span><br>&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">head</span>&gt;</span><br>&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">body</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">div</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">class</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"webgl-content"</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">div</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">id</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"gameContainer"</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">style</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"width:&nbsp;700px;&nbsp;height:&nbsp;470px"</span>&gt;</span><span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">div</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">div</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">class</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"footer"</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">div</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">class</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"webgl-logo"</span>&gt;</span><span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">div</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">div</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">class</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"fullscreen"</span>&nbsp;<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">onclick</span>=<span class="hljs-string" style="color: #98c379; line-height: 26px;">"gameInstance.SetFullscreen(1)"</span>&gt;</span><span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">div</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">div</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">div</span>&gt;</span><br>&nbsp;&nbsp;<span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">body</span>&gt;</span><br><span class="hljs-tag" style="line-height: 26px;">&lt;/<span class="hljs-name" style="color: #e06c75; line-height: 26px;">html</span>&gt;</span><br></code></pre>
+<h3 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;"><span class="prefix" style="display: none;"></span><span class="content">三、博客文案</span><span class="suffix" style="display: none;"></span></h3>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">1.格式约定</span><span class="suffix" style="display: none;"></span></h4>
+<ul data-tool="mdnice编辑器" style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;"><p style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">标题：</p>
+<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: square;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">二标题 ## 文案</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">三标题 ### 一、文案</section></li></ul>
+</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;"><p style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">四标题 #### 1.文案</p>
+</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;"><p style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">图片</p>
+<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: square;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">非自创图片说明文案：标明出处</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">自创图片说明文案：自定义</section></li></ul>
+</section></li></ul>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">2.链接</span><span class="suffix" style="display: none;"></span></h4>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">文字链接</p>
+<pre class="custom" data-tool="mdnice编辑器" style="margin-top: 10px; margin-bottom: 10px;"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #abb2bf; background: #282c34; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;">[<span class="hljs-string" style="color: #98c379; line-height: 26px;">文字</span>](<span class="hljs-link" style="color: #61aeee; text-decoration: underline; line-height: 26px;">https://链接</span>)<br></code></pre>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">网站链接</p>
+<pre class="custom" data-tool="mdnice编辑器" style="margin-top: 10px; margin-bottom: 10px;"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #abb2bf; background: #282c34; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;"><span class="xml" style="line-height: 26px;"><span class="hljs-tag" style="line-height: 26px;">&lt;<span class="hljs-name" style="color: #e06c75; line-height: 26px;">https:</span>//<span class="hljs-attr" style="color: #d19a66; line-height: 26px;">realburt41.top</span>&gt;</span></span><br></code></pre>
+<h3 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;"><span class="prefix" style="display: none;"></span><span class="content">四、博客评论</span><span class="suffix" style="display: none;"></span></h3>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">笔者使用的是gitalk，假如无法使用，记得查看OAuth Apps中的网站地址配置是否正确</p>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">待续...</p>
+</section>

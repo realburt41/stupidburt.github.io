@@ -10,112 +10,49 @@ tags:
     - C#
 ---
 
-
-
-
-
-
-## 前言
-
-在此记录收集到的C#知识点，不管是会的还是不会的，都加强巩固，自强不息
-
-
-
-
-
-## 知识点
-
-### 一、概念
-
-#### 1.拆箱与装箱
-
-装箱：值类型隐式转换为object类型 或 由此值类型实现的任何接口类型 的过程
-
-1. 在堆中开辟内存空间
-2. 将值类型的数据复制到堆中
-3. 返回堆中新分配对象的地址
-
-拆箱：上述逆过程
-
-1. 判断给定类型是否是装箱时的类型
-2. 返回已装箱实例中属于原值类型字段的地址
-
-#### 2.string str = null与string str = "" 区别
-
-str = null表示空引用，不占空间
-
-str = ""   表示初始化对象并为其分配空间
-
-#### 3.ref和out 区别
-
-...
-
-#### 4.序列化与反序列化是什么
-
-1. 序列化是将对象状态转换为可保持或传输的格式的过程
-2. 反序列化则是将流转换为对象。
-
-这两个过程结合起来，可以轻松实现存储和传输数据。
-
-#### 5.sealed修饰符
-
-...
-
-#### 6.选择结构还是类
-
-1. 堆栈空间有限，对于大量的逻辑对象，创建类要比创建结构好一些
-2. 结构可以表示如**点**、**矩阵**、**颜色**等的轻量对象，成本第=低一点
-3. 在表现抽象和多级别的对象层次时，类是最好的选择
-4. 大多数情况下该类型只是一些数据时，用结构比较好
-
-#### 7.什么是强类型
-
-为所有变量指定数据类型的语言称为“强类型”，很明显c#是而python不是
-
-#### 8.什么是委托
-
-1. 委托是一种引用方法的类型（就是把方法当作变量）
-2. 委托类似c++函数指针，但委托是类型安全的
-3. 委托允许将方法作为参数进行传递
-4. 可用于定义回调方法
-
-#### 9.值类型和引用类型是什么，区别是什么
-
-1. 值类型：值类型保存的是具体的值。byte，int，float，double，char，bool ...
-2. 引用类型：引用类型保存的是值的地址。string 与 class
-
-**区别：**
-
-1. 值类型被分配在栈上，他的变量直接包含变量的实例，使用效率高
-2. 引用类型分配在托管堆上，引用类型的变量通常包含一个指向实例的指针，变量通过该指针来引用实例
-
-#### 10.sealed关键字作用
-
-作为**类别**的时候 不能有子类。
-
-作为函数的**修饰符**的时候 在子类里不能重写函数。
-
-#### 11.Mono与之间.Net的关系。
-
-mono是.net的一个工具，.net只能在windows平台下跑，mono可以跨平台，可以运行于Linux，FreeBSD，Unix，OS X和Solaris
-
-
-
-
-
-
-
-## References
-
-1. <https://zhuanlan.zhihu.com/p/161736640>
-
-
-
-
-
-
-
-
-
-待续...
-
+<section id="nice" data-tool="mdnice编辑器" data-website="https://www.mdnice.com" style="font-size: 16px; color: black; padding: 0 10px; line-height: 1.6; word-spacing: 0px; letter-spacing: 0px; word-break: break-word; word-wrap: break-word; text-align: left; font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><h2 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; border-bottom: 2px solid #B2A089; font-size: 1.3em;"><span class="prefix" style="display: none;"></span><span class="content" style="display: inline-block; font-weight: bold; background: #B2A089; color: #ffffff; padding: 3px 10px 1px; border-top-right-radius: 3px; border-top-left-radius: 3px; margin-right: 3px;">前言</span><span class="suffix"></span><span style="display: inline-block; vertical-align: bottom; border-bottom: 36px solid #efebe9; border-right: 20px solid transparent;"> </span></h2>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">在此记录收集到的C#知识点，不管是会的还是不会的，都加强巩固，自强不息</p>
+<h2 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; border-bottom: 2px solid #B2A089; font-size: 1.3em;"><span class="prefix" style="display: none;"></span><span class="content" style="display: inline-block; font-weight: bold; background: #B2A089; color: #ffffff; padding: 3px 10px 1px; border-top-right-radius: 3px; border-top-left-radius: 3px; margin-right: 3px;">知识点</span><span class="suffix"></span><span style="display: inline-block; vertical-align: bottom; border-bottom: 36px solid #efebe9; border-right: 20px solid transparent;"> </span></h2>
+<h3 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;"><span class="prefix" style="display: none;"></span><span class="content">一、概念</span><span class="suffix" style="display: none;"></span></h3>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">1.拆箱与装箱</span><span class="suffix" style="display: none;"></span></h4>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">装箱：值类型隐式转换为object类型 或 由此值类型实现的任何接口类型 的过程</p>
+<ol data-tool="mdnice编辑器" style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: decimal;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">在堆中开辟内存空间</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">将值类型的数据复制到堆中</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">返回堆中新分配对象的地址</section></li></ol>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">拆箱：上述逆过程</p>
+<ol data-tool="mdnice编辑器" style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: decimal;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">判断给定类型是否是装箱时的类型</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">返回已装箱实例中属于原值类型字段的地址</section></li></ol>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">2.string str = null与string str = "" 区别</span><span class="suffix" style="display: none;"></span></h4>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">str = null表示空引用，不占空间</p>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">str = ""   表示初始化对象并为其分配空间</p>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">3.ref和out 区别</span><span class="suffix" style="display: none;"></span></h4>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">...</p>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">4.序列化与反序列化是什么</span><span class="suffix" style="display: none;"></span></h4>
+<ol data-tool="mdnice编辑器" style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: decimal;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">序列化是将对象状态转换为可保持或传输的格式的过程</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">反序列化则是将流转换为对象。</section></li></ol>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">这两个过程结合起来，可以轻松实现存储和传输数据。</p>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">5.sealed修饰符</span><span class="suffix" style="display: none;"></span></h4>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">...</p>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">6.选择结构还是类</span><span class="suffix" style="display: none;"></span></h4>
+<ol data-tool="mdnice编辑器" style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: decimal;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">堆栈空间有限，对于大量的逻辑对象，创建类要比创建结构好一些</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">结构可以表示如<strong style="font-weight: bold; color: black;">点</strong>、<strong style="font-weight: bold; color: black;">矩阵</strong>、<strong style="font-weight: bold; color: black;">颜色</strong>等的轻量对象，成本第=低一点</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">在表现抽象和多级别的对象层次时，类是最好的选择</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">大多数情况下该类型只是一些数据时，用结构比较好</section></li></ol>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">7.什么是强类型</span><span class="suffix" style="display: none;"></span></h4>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">为所有变量指定数据类型的语言称为“强类型”，很明显c#是而python不是</p>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">8.什么是委托</span><span class="suffix" style="display: none;"></span></h4>
+<ol data-tool="mdnice编辑器" style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: decimal;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">委托是一种引用方法的类型（就是把方法当作变量）</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">委托类似c++函数指针，但委托是类型安全的</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">委托允许将方法作为参数进行传递</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">可用于定义回调方法</section></li></ol>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">9.值类型和引用类型是什么，区别是什么</span><span class="suffix" style="display: none;"></span></h4>
+<ol data-tool="mdnice编辑器" style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: decimal;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">值类型：值类型保存的是具体的值。byte，int，float，double，char，bool ...</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">引用类型：引用类型保存的是值的地址。string 与 class</section></li></ol>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;"><strong style="font-weight: bold; color: black;">区别：</strong></p>
+<ol data-tool="mdnice编辑器" style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: decimal;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">值类型被分配在栈上，他的变量直接包含变量的实例，使用效率高</section></li><li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;">引用类型分配在托管堆上，引用类型的变量通常包含一个指向实例的指针，变量通过该指针来引用实例</section></li></ol>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">10.sealed关键字作用</span><span class="suffix" style="display: none;"></span></h4>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">作为<strong style="font-weight: bold; color: black;">类别</strong>的时候 不能有子类。</p>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">作为函数的<strong style="font-weight: bold; color: black;">修饰符</strong>的时候 在子类里不能重写函数。</p>
+<h4 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;"><span class="prefix" style="display: none;"></span><span class="content">11.Mono与之间.Net的关系。</span><span class="suffix" style="display: none;"></span></h4>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">mono是.net的一个工具，.net只能在windows平台下跑，mono可以跨平台，可以运行于Linux，FreeBSD，Unix，OS X和Solaris</p>
+<h2 data-tool="mdnice编辑器" style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; border-bottom: 2px solid #B2A089; font-size: 1.3em;"><span class="prefix" style="display: none;"></span><span class="content" style="display: inline-block; font-weight: bold; background: #B2A089; color: #ffffff; padding: 3px 10px 1px; border-top-right-radius: 3px; border-top-left-radius: 3px; margin-right: 3px;">References</span><span class="suffix"></span><span style="display: inline-block; vertical-align: bottom; border-bottom: 36px solid #efebe9; border-right: 20px solid transparent;"> </span></h2>
+<ol data-tool="mdnice编辑器" style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: decimal;">
+<li><section style="margin-top: 5px; margin-bottom: 5px; line-height: 26px; text-align: left; color: rgb(1,1,1); font-weight: 500;"><a href="https://zhuanlan.zhihu.com/p/161736640" style="text-decoration: none; word-wrap: break-word; font-weight: bold; color: #B2A089; border-bottom: 1px solid #B2A089;">https://zhuanlan.zhihu.com/p/161736640</a></section></li></ol>
+<p data-tool="mdnice编辑器" style="font-size: 16px; padding-top: 8px; padding-bottom: 8px; margin: 0; line-height: 26px; color: black;">待续...</p>
+</section>
