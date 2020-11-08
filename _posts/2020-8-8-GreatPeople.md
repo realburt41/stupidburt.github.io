@@ -102,7 +102,6 @@ CSND：<https://blog.csdn.net/zhmxy555>
 
 CSND：<https://blog.csdn.net/chenggong2dm>
 
-<![蓝1](https://files.mdnice.com/blue.jpg),![绿2](https://files.mdnice.com/green.jpg),![红3](https://files.mdnice.com/red.jpg)>
 
 
 
