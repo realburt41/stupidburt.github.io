@@ -278,11 +278,11 @@ const int const * p4;
 
 第一种、第二种和第四种简单来说就是只可以修改指向，不可以修改值
 
-![](C:\Users\czy\Desktop\Snipaste_2020-11-09_23-12-58.png)
+![](/img/in-post/Cpp/1.png)
 
 第三种则是第一二四种反过来，不可以修改指向，但可以修改值
 
-![](C:\Users\czy\Desktop\Snipaste_2020-11-09_23-15-47.png)
+![](/img/in-post/Cpp/2.png)
 
 其实第一二四种都是一样的。一般来说第一种和第三种更常用。
 
