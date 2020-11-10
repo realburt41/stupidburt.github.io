@@ -315,7 +315,7 @@ void function1(int const *i) {
     i = &j;		//正确
 }
 
-void function2(int * const i) {   
+void function2(int * const i) {
     int j = 2;    
     *i = 3;     //正确
     i = &j;     //此时这里会报错，因为const限定了i不可以被更改地址 
