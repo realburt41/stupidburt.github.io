@@ -50,8 +50,8 @@ gitalk:
  enable: true
  github_id: realburt41
  repo: BlogRemark
- client_id: '26f8df92e2459d56011f'
- client_secret: '39a2a849149dabbbe051da4155217c9bb1f08e12'
+ client_id: 26f8df92e2459d56011f
+ client_secret: 39a2a849149dabbbe051da4155217c9bb1f08e12
  admin_user: realburt41
  distraction_free_mode: true
  language: zh-CN
