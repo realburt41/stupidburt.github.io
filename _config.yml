@@ -45,26 +45,17 @@ kramdown:
     input: GFM                            # use Github Flavored Markdown !important
 
 
-
-
-# Disqus settings
-#disqus_username: _your_disqus_short_name_
-
-# Duoshuo settings
-duoshuo_username: 
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true              # set to false if you want to use Comment without Sharing
-
-
-
-
-# Analytics settings
-# Baidu Analytics
-ba_track_id: 
-# Google Analytics
-ga_track_id: ''            # Format: UA-xxxxxx-xx
-ga_domain: 
-
+# Comment settings
+gitalk:
+ enable: true
+ github_id: realburt41
+ repo: BlogRemark
+ client_id: '26f8df92e2459d56011f'
+ client_secret: '39a2a849149dabbbe051da4155217c9bb1f08e12'
+ admin_user: realburt41
+ distraction_free_mode: true
+ language: zh-CN
+ proxy: https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token
 
 
 # Sidebar settings
