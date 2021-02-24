@@ -1,6 +1,6 @@
 # Hey
 
-##### This is Burt's blog repository
+##### This is Burt's [blog](https://realburt41.top) repository
 
 #### make some games..
 
