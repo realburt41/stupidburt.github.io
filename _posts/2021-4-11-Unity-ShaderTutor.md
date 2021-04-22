@@ -402,7 +402,7 @@ shader_feature适合在材质中设置，而multi_compile 适合用代码全局�
 
 
 
-## 3、屏幕UV篇
+## 三、屏幕UV篇
 
 效果：
 
@@ -541,11 +541,7 @@ Reference：**https://zhuanlan.zhihu.com/p/107627483**
 
 
 
-## 4、UI
-
-
-
-
+## 四、UI
 
 PerRendererData：被他标签的属性在属性面板就看不到了，只能通过代码动态修改。他是配合setPropertyBlock()方法使用的，用于：想要A和B同样材质，分别不同属性的场景上，而且此操作会大大降低消耗
 
@@ -553,7 +549,7 @@ PerRendererData：被他标签的属性在属性面板就看不到了，只能�
 
 
 
-## 5、渲染路径
+## 五、渲染路径
 
 - 前向渲染路径(Forward Rendering Path) 
   - 特点：一个物体在受到多个灯光影响时，可能会产生一个或者多个Pass，具体取决于多个因素
@@ -612,7 +608,7 @@ Tags{ “LightMode” = “XXX” }
 
 
 
-## 6、深度测试
+## 六、深度测试
 
 - 从3D投影为2D，变换后的Z值就成了深度信息
 - 每个顶点的深度信息，在光栅化阶段会被插值，并写入到深度缓冲中（如果开启了深度写入的话）
@@ -621,7 +617,7 @@ Tags{ “LightMode” = “XXX” }
 
 
 
-## 7、纹理
+## 七、纹理
 
 **1、分类**
 
@@ -838,15 +834,7 @@ fixed4 frag (v2f i) : SV_Target
 
 
 
-
-
-
-
-
-
-
-
-## 8、GPU Instance
+## 八、GPU Instance
 
 **1、Rendering Statistics Window面板参数**
 
@@ -1069,7 +1057,7 @@ Graphics：
 
 
 
-## 9、优化
+## 九、优化
 
 对于一个游戏来说，它主要需要使用两种计算资源，CPU和GPU，他们会互相合作，来让我们游戏可以在预期的帧率和分辨率下工作。
 所以，我们可以把造成游戏性能瓶颈的主要原因分成以下几个方面
@@ -1293,7 +1281,7 @@ A B
 
 
 
-## 10、PBR
+## 十、PBR
 
 Physically Based Rendering，中文译为基于物理的渲染
 
