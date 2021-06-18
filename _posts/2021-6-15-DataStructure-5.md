@@ -4,8 +4,8 @@ title:      "数据结构"
 subtitle:   "第五章：树"
 date:       2021-6-15
 author:     "Burt"
-mathjax: true
 header-style: text 
+mathjax: true
 tags:
     - CS
     - Data Structure
@@ -172,7 +172,7 @@ n个结点的二叉树有$\frac {C_{2n}^{n}}{n+1}$种形态
 1. 设非空二叉树中度为0、1、2的结点个数分别为n<sub>0</sub>、n<sub>1</sub>和n<sub>2</sub>，则**n<sub>0</sub> = n<sub>2</sub> + 1**（叶子结点比二分支结点多一个）
 2. 二叉树**第i层**至**多**有**2<sup>i-1</sup>个结点**（i≥1）
    - m叉树第i层至多有m<sup>i-1</sup>个结点（i≥1）
-3. 高度为**h**的二叉树至**多**有**2<sup>h-1</sup>个结点**（也就是满二叉树）
+3. 高度为**h**的二叉树至**多**有**2<sup>h</sup> - 1个结点**（也就是满二叉树）
    - 高度为h的m叉树至多有$\frac{m^h-1}{m-1}$个结点
 
 
