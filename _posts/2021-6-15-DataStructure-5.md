@@ -4,6 +4,7 @@ title:      "数据结构"
 subtitle:   "第五章：树"
 date:       2021-6-15
 author:     "Burt"
+mathjax: true
 header-style: text 
 tags:
     - CS
