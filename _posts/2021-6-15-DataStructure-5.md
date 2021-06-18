@@ -5,7 +5,6 @@ subtitle:   "第五章：树"
 date:       2021-6-15
 author:     "Burt"
 header-style: text 
-mathjax: true
 tags:
     - CS
     - Data Structure
@@ -105,7 +104,7 @@ tags:
 
 **双亲表示法（顺序存储）**：每个结点中保存指向双亲的指针
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fzcdll.github.io%2Fimages%2Fparent-tree.png&refer=http%3A%2F%2Fzcdll.github.io&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626415571&t=9516cc645e0c4ce8e9546cf600474a7c" style="zoom:80%;" />
+![](https://img.kanzhun.com/images/seo/mianshiti/20191125/d791eda7f60053a6ffe2b2ccb27fa94b.jpg)
 
 
 
@@ -118,13 +117,13 @@ tags:
 
 **孩子表示法（顺序+链式存储）**：顺序存储各个节点，每个结点中保存孩子链表头指针
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.codes51.com%2FArticle%2Fimage%2F20160223%2F20160223101345_0722.png&refer=http%3A%2F%2Fimage.codes51.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626415983&t=7dc2c34cf176795842c51460fc497e6c" style="zoom:80%;" />
+![](https://gitee.com/yangyuanhuyyh/MDimage/raw/master/uPic/image-20200610100421170.png)
 
 
 
 **孩子兄弟表示法（链式存储）**：左指针指向孩子，右指针指向兄弟
 
-![](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=372481326,1853316544&fm=15&gp=0.jpg)
+![](https://gitee.com/yangyuanhuyyh/MDimage/raw/master/uPic/image-20200610104528702.png)
 
 其实这就是树转二叉树
 
@@ -136,7 +135,7 @@ tags:
 
 森林是m（m ≥ 0）棵互不相交的树的集合
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.51wendang.com%2Fpic%2F80800cc6d9e460b5009fc74ffc3ae1833307aa4f%2F2-170-png_6_0_0_256_838_352_123_833.4_1152.54-494-0-777-494.jpg&refer=http%3A%2F%2Fwww.51wendang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626416427&t=6674dcae772c69613edbba7264c095f8" style="zoom:80%;" />
+![](https://upload-images.jianshu.io/upload_images/6567790-f8a7032a2a1ea55d.png)
 
 先把三棵树转成二叉树
 
@@ -161,39 +160,13 @@ n个结点的二叉树有$\frac {C_{2n}^{n}}{n+1}$种形态
 
 
 
-
-
-### 1.常考性质
-
-
-
-**二叉树常考性质**
-
-1. 设非空二叉树中度为0、1、2的结点个数分别为n<sub>0</sub>、n<sub>1</sub>和n<sub>2</sub>，则**n<sub>0</sub> = n<sub>2</sub> + 1**（叶子结点比二分支结点多一个）
-2. 二叉树**第i层**至**多**有**2<sup>i-1</sup>个结点**（i≥1）
-   - m叉树第i层至多有m<sup>i-1</sup>个结点（i≥1）
-3. 高度为**h**的二叉树至**多**有**2<sup>h</sup> - 1个结点**（也就是满二叉树）
-   - 高度为h的m叉树至多有$\frac{m^h-1}{m-1}$个结点
-
-
-
-**完全二叉树常考性质**
-
-1. 具有n个（n>0）结点的完全二叉树的高度h为**$\lceil \log_2(n+1) \rceil$** 或 **$\lfloor \log_2n + 1\rfloor$**
-2. 对于完全二叉树，可以由结点数n推出度为0、1和2的结点个数为n<sub>0</sub>、n<sub>1</sub>和n<sub>2</sub>
-   - 若完全二叉树有2k个（偶数）结点，则必有n<sub>1</sub> = 1，n<sub>0</sub> = k，n<sub>2</sub> = k - 1
-   - 若完全二叉树有2k-1个（奇数）结点，则必有n<sub>1</sub> = 0，n<sub>0</sub> = k，n<sub>2</sub> = k - 1
-3. 深度为k的完全二叉树至少有2<sup>k-1</sup>个结点，至多有2<sup>k</sup> - 1个结点
-
-
-
-### 2.特殊二叉树
+### 1.特殊二叉树
 
 
 
 **满二叉树**：一颗高度为h，且具有2<sup>h</sup> - 1个结点的二叉树
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.mamicode.com%2Finfo%2F202007%2F20200705174025362527.png&refer=http%3A%2F%2Fimage.mamicode.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626328217&t=63216ceefb6f503a3f56edee44f8d6f0" alt="满二叉树" style="zoom:80%;" />
+![满二叉树](http://image.mamicode.com/info/202007/20200705174025362527.png)
 
 特点：
 
@@ -207,7 +180,7 @@ n个结点的二叉树有$\frac {C_{2n}^{n}}{n+1}$种形态
 
 **完全二叉树**：当且仅当其每个结点都与高度为h的满二叉树中编号1~n的结点一一对应时，称为完全二叉树
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage1.bubuko.com%2Finfo%2F202007%2F20200702002547976538.png&refer=http%3A%2F%2Fimage1.bubuko.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626328171&t=c15cc203e795961390fa8b37b96c70af" alt="完全二叉树" style="zoom:80%;" />
+![完全二叉树](http://image1.bubuko.com/info/202007/20200702002547976538.png)
 
 所以满二叉树就是一种特殊的完全二叉树
 
@@ -232,13 +205,13 @@ n个结点的二叉树有$\frac {C_{2n}^{n}}{n+1}$种形态
 
 左子树和右子树又各是一棵二叉排序树
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F8897049-856881d6ab38ecbb.jpg&refer=http%3A%2F%2Fupload-images.jianshu.io&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626328134&t=4ffc14c23a28d6bcab9cc668f41efe9d" alt="二叉排序树" style="zoom:80%;" />
+![二叉排序树](https://upload-images.jianshu.io/upload_images/8897049-856881d6ab38ecbb.jpg)
 
 对其进行中序遍历，可以得到一个递增的有序序列
 
 二叉排序树可用于元素的有序组织、搜索
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F13944677-7d803e184085115a.gif&refer=http%3A%2F%2Fupload-images.jianshu.io&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626421582&t=c309331f53d13d2c160790754ee452e1" style="zoom: 33%;" />
+![](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F13944677-7d803e184085115a.gif&refer=http%3A%2F%2Fupload-images.jianshu.io&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626421582&t=c309331f53d13d2c160790754ee452e1)
 
 新插入的结点一定是叶子结点
 
@@ -258,13 +231,13 @@ n个结点的二叉树有$\frac {C_{2n}^{n}}{n+1}$种形态
 
 平衡二叉树结点的平衡因子的值只可能是-1、0和1
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-3641cb45e889c1d344e9164c95a0644f_1200x500.jpg&refer=http%3A%2F%2Fpic4.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626328416&t=b983b0cfb0bd3a4715a457a01293c83e" alt="平衡二叉树" style="zoom: 33%;" />
+![平衡二叉树](https://pic1.zhimg.com/v2-3641cb45e889c1d344e9164c95a0644f_1440w.jpg)
 
 为什么要有平衡二叉树？
 
 因为二叉树有可能退化为单链表，这时候作为树就没有意义
 
-<img src="https://img2018.cnblogs.com/blog/578453/201909/578453-20190927102318864-485895958.png" style="zoom: 67%;" />
+![](https://img2018.cnblogs.com/blog/578453/201909/578453-20190927102318864-485895958.png)
 
 平衡二叉树能有更高的搜索效率
 
@@ -278,11 +251,11 @@ n个结点的二叉树有$\frac {C_{2n}^{n}}{n+1}$种形态
 
 - LL（右单旋转）：在A的**左**孩子的**左**子树中插入导致不平衡
 
-  <img src="https://img2018.cnblogs.com/blog/578453/201909/578453-20190927103444205-176846244.gif" style="zoom: 67%;" />
+  ![](https://img2018.cnblogs.com/blog/578453/201909/578453-20190927103444205-176846244.gif)
 
 - RR（左单旋转）：在A的**右**孩子的**右**子树中插入导致不平衡
 
-  <img src="https://img2018.cnblogs.com/blog/578453/201909/578453-20190927103554968-1963499271.gif" style="zoom:67%;" />
+  ![](https://img2018.cnblogs.com/blog/578453/201909/578453-20190927103554968-1963499271.gif)
 
 - LR（先左后右双旋转）：在A的**左**孩子的**右**子树中插入导致不平衡
 
@@ -307,7 +280,7 @@ n个结点的二叉树有$\frac {C_{2n}^{n}}{n+1}$种形态
 1. 每次选择两个最小权值的结点两两结合，然后把这两个结点结合的根作为新的结点，权值为两个最小权值的和
 2. 重复第一步
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F490%2Ff68b27885d47d7d72e152902967b9f4a.gif&refer=http%3A%2F%2Fwww.pianshen.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626423761&t=8b6eec1b38c33c76876ff5343a8c8cfa" style="zoom:67%;" />
+![](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F490%2Ff68b27885d47d7d72e152902967b9f4a.gif&refer=http%3A%2F%2Fwww.pianshen.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626423761&t=8b6eec1b38c33c76876ff5343a8c8cfa)
 
 - 哈夫曼树中不存在度为1的结点
 - 哈夫曼树并不唯一，但WPL必然相同且为最优
@@ -322,26 +295,31 @@ n个结点的二叉树有$\frac {C_{2n}^{n}}{n+1}$种形态
 
 是一种前缀编码
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.it610.com%2Fimage%2Fproduct%2Fc490fd4e561446d6939fc7b57ae4ca68.png&refer=http%3A%2F%2Fimg.it610.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626424505&t=35a84161490cf82a960990823317a74f" style="zoom:67%;" />
+![](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.it610.com%2Fimage%2Fproduct%2Fc490fd4e561446d6939fc7b57ae4ca68.png&refer=http%3A%2F%2Fimg.it610.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626424505&t=35a84161490cf82a960990823317a74f)
 
 
 
-**线索二叉树**
+### 2.常考性质
 
-就是利用序列，将空的指针利用起来
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.mamicode.com%2Finfo%2F201911%2F20191118165525934117.png&refer=http%3A%2F%2Fimage.mamicode.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626333791&t=387ba46270aa09eb7a456e0122ff6634" alt="线索二叉树" style="zoom:67%;" />
 
-作用：方便从一个指定结点出发，找到其前驱、后继；方便遍历
+**二叉树常考性质**
 
-指向前驱/后继的指针称为线索
+1. 设非空二叉树中度为0、1、2的结点个数分别为n<sub>0</sub>、n<sub>1</sub>和n<sub>2</sub>，则**n<sub>0</sub> = n<sub>2</sub> + 1**（叶子结点比二分支结点多一个）
+2. 二叉树**第i层**至**多**有**2<sup>i-1</sup>个结点**（i≥1）
+   - m叉树第i层至多有m<sup>i-1</sup>个结点（i≥1）
+3. 高度为**h**的二叉树至**多**有**2<sup>h-1</sup>个结点**（也就是满二叉树）
+   - 高度为h的m叉树至多有$\frac{m^h-1}{m-1}$个结点
 
-|        | 中序线索二叉树 | 先序线索二叉树 | 后序线索二叉树 |
-| :----: | :------------: | :------------: | :------------: |
-| 找前驱 |       √        |       ×        |       √        |
-| 找后继 |       √        |       √        |       ×        |
 
- 
+
+**完全二叉树常考性质**
+
+1. 具有n个（n>0）结点的完全二叉树的高度h为**$\lceil \log_2(n+1) \rceil$** 或 **$\lfloor \log_2n + 1\rfloor$**
+2. 对于完全二叉树，可以由结点数n推出度为0、1和2的结点个数为n<sub>0</sub>、n<sub>1</sub>和n<sub>2</sub>
+   - 若完全二叉树有2k个（偶数）结点，则必有n<sub>1</sub> = 1，n<sub>0</sub> = k，n<sub>2</sub> = k - 1
+   - 若完全二叉树有2k-1个（奇数）结点，则必有n<sub>1</sub> = 0，n<sub>0</sub> = k，n<sub>2</sub> = k - 1
+3. 深度为k的完全二叉树至少有2<sup>k-1</sup>个结点，至多有2<sup>k</sup> - 1个结点
 
 
 
@@ -364,7 +342,7 @@ n个结点的二叉树有$\frac {C_{2n}^{n}}{n+1}$种形态
 
 **顺序存储**
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.it610.com%2Fimage%2Finfo5%2F6920dd95659e4d85964a2b2c4578ef79.jpg&refer=http%3A%2F%2Fimg.it610.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626331086&t=0ac3e75d53d9c2a96bb5d5b19d7902a8" alt="顺序存储" style="zoom:67%;" />
+![顺序存储](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.it610.com%2Fimage%2Finfo5%2F6920dd95659e4d85964a2b2c4578ef79.jpg&refer=http%3A%2F%2Fimg.it610.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626331086&t=0ac3e75d53d9c2a96bb5d5b19d7902a8)
 
 顺序存储的二叉树会浪费很多空间
 
@@ -382,7 +360,7 @@ n个结点的二叉树有$\frac {C_{2n}^{n}}{n+1}$种形态
 
 **链式存储**
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.mamicode.com%2Finfo%2F201801%2F20180120183527333756.png&refer=http%3A%2F%2Fimage.mamicode.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626331670&t=e110c92b12091d856d8880226c325a4f" alt="链式存储" style="zoom: 80%;" />
+![链式存储](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.mamicode.com%2Finfo%2F201801%2F20180120183527333756.png&refer=http%3A%2F%2Fimage.mamicode.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626331670&t=e110c92b12091d856d8880226c325a4f)
 
 n个结点的二叉链表有n+1个空链表（可用于构造线索二叉树）
 
@@ -390,7 +368,7 @@ n个结点的二叉链表有n+1个空链表（可用于构造线索二叉树）
 
 这时候再加个指针指向父结点，就是三叉链表
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic002.cnblogs.com%2Fimages%2F2012%2F331765%2F2012031419200953.png&refer=http%3A%2F%2Fpic002.cnblogs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626331890&t=535e53e5f32cb0754636ff2a13a1bbd7" alt="三叉链表" style="zoom:80%;" />
+![三叉链表](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic002.cnblogs.com%2Fimages%2F2012%2F331765%2F2012031419200953.png&refer=http%3A%2F%2Fpic002.cnblogs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626331890&t=535e53e5f32cb0754636ff2a13a1bbd7)
 
 方便找父结点
 
@@ -402,7 +380,7 @@ n个结点的二叉链表有n+1个空链表（可用于构造线索二叉树）
 
 每个结点中保存指向双亲的指针
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fzcdll.github.io%2Fimages%2Fparent-tree.png&refer=http%3A%2F%2Fzcdll.github.io&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626336093&t=bf405b48c632b20e8d93dc977bf1a101" alt="双亲表示法" style="zoom:80%;" />
+![双亲表示法](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fzcdll.github.io%2Fimages%2Fparent-tree.png&refer=http%3A%2F%2Fzcdll.github.io&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626336093&t=bf405b48c632b20e8d93dc977bf1a101)
 
 
 
@@ -410,7 +388,7 @@ n个结点的二叉链表有n+1个空链表（可用于构造线索二叉树）
 
 先根：**根**左右（树/森林的**先根**遍历和树/森林转二叉树的**先根**遍历的结果是一样的）
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-9db573561b49f6929d7612262f0954af_b.gif&refer=http%3A%2F%2Fpic4.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626422311&t=85671b5d4bb63044443a6d4cee09d862" style="zoom:67%;" />
+![](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-9db573561b49f6929d7612262f0954af_b.gif&refer=http%3A%2F%2Fpic4.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626422311&t=85671b5d4bb63044443a6d4cee09d862)
 
 中根：左**根**右（森林的**中根**遍历和森林转二叉树的**中根**遍历的结果是一样的）
 
@@ -445,4 +423,19 @@ n个结点的二叉链表有n+1个空链表（可用于构造线索二叉树）
 
 
 
+### 5.线索二叉树
 
+就是利用序列，将空的指针利用起来
+
+![线索二叉树](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.mamicode.com%2Finfo%2F201911%2F20191118165525934117.png&refer=http%3A%2F%2Fimage.mamicode.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626333791&t=387ba46270aa09eb7a456e0122ff6634)
+
+作用：方便从一个指定结点出发，找到其前驱、后继；方便遍历
+
+指向前驱/后继的指针称为线索
+
+|        | 中序线索二叉树 | 先序线索二叉树 | 后序线索二叉树 |
+| :----: | :------------: | :------------: | :------------: |
+| 找前驱 |       √        |       ×        |       √        |
+| 找后继 |       √        |       √        |       ×        |
+
+ 
