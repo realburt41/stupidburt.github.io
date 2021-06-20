@@ -5,6 +5,7 @@ subtitle:   ""
 date:       2020-8-7
 author:     "Burt"
 header-img: "img/in-post/Blog/BlogManual-bg.jpg"
+onTop: true
 header-mask: 0.5
 tags:
     - Other
@@ -22,7 +23,7 @@ tags:
 
 
 
-### 一、图片
+### 一、功能
 
 
 
@@ -34,7 +35,7 @@ header-mask: 0.3
 
 
 
-#### 2.Latex支持
+#### 2.mathjax支持
 
 ~~~c
 mathjax: true
@@ -55,6 +56,16 @@ header-style: text
 ~~~c
 "/img/in-post/..."
 ~~~
+
+
+
+#### 5.文章置顶
+
+~~~c
+onTop: true
+~~~
+
+[文章置顶实现](https://github.com/Huxpro/huxpro.github.io/issues/353)
 
 
 
