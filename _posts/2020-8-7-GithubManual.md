@@ -71,8 +71,8 @@ commit命令是指提交暂存区存储的变化并生成一个新的版本
 
 网络的SSH修改为使用git默认的ssh客户端，而不是tortosieGit提供的客户端
 
-![](https://images2017.cnblogs.com/blog/679411/201802/679411-20180204093027170-688143560.png)
+<img src="https://images2017.cnblogs.com/blog/679411/201802/679411-20180204093027170-688143560.png" style="zoom: 67%;" />
 
 本机凭证修改为当前用户
 
-![](https://images2017.cnblogs.com/blog/679411/201802/679411-20180204093033810-433111841.png)
+<img src="https://images2017.cnblogs.com/blog/679411/201802/679411-20180204093033810-433111841.png" style="zoom:67%;" />
