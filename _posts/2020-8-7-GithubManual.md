@@ -8,6 +8,7 @@ header-img: "img/in-post/Github/Github-bg.jpg"
 header-mask: 0.5
 tags:
     - Github
+
 ---
 
 
@@ -22,19 +23,41 @@ tags:
 
 
 
+### 一、创建
+
+~~~c
+git init	//创建本地仓库
+git status	//查看状态
+git log		//查看日志
+~~~
+
+- 仓库区：git文件夹为仓库区，类似一个数据库存储着每一次提交的变化
+- 工作区：git所在目录称为工作区，我们在这里创建项目和其他文件
+
+
+
+
+
+
+
 ### 一、更新
-
-
 
 **1.简易更新**
 
-~~~
+~~~c
 1、git add .     			//添加所有文件
 2、git pull github master  	//拉来名为github分支
 3、git commit -m "说明文字"	 //说明
 4、git push github master   //上传
 ~~~
 
+git add <文件名>可以把文件添加到**暂存区**
+
+暂存区存储将要被提交的文件变化
 
 
-待续
+
+commit命令是指提交暂存区存储的变化并生成一个新的版本
+
+
+

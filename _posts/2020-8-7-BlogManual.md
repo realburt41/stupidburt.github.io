@@ -22,13 +22,13 @@ tags:
 
 
 
-### 一.图片
+### 一、图片
 
 
 
 #### 1.为图片增加一个黑色的mask
 
-~~~
+~~~c
 header-mask: 0.3
 ~~~
 
@@ -36,7 +36,7 @@ header-mask: 0.3
 
 #### 2.Latex支持
 
-~~~
+~~~c
 mathjax: true
 ~~~
 
@@ -44,7 +44,7 @@ mathjax: true
 
 #### 3.不显示head picture
 
-~~~
+~~~c
 header-style: text 
 ~~~
 
@@ -52,7 +52,7 @@ header-style: text
 
 #### 4.图片路径
 
-~~~
+~~~c
 "/img/in-post/..."
 ~~~
 
@@ -113,3 +113,15 @@ Application.ExternalCall("JS方法");
 ### 三、评论
 
 gitalk，假如无法使用，记得查看OAuth Apps中的网站地址配置是否正确
+
+
+
+### 四、jekyll
+
+ruby版本不要太高，不然不兼容jekyll导致无法本地部署
+
+![](https://img-blog.csdnimg.cn/20210609094318673.png)
+
+
+
+之后到达目标路径，正常jekyll serve即可
