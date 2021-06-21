@@ -14,7 +14,21 @@
 
 <!-- jQuery -->
 <script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
+<!-- 到顶部 -->
+<script type="text/javascript" src="/js/jquery.goup.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
 
+            $.goup({
+                trigger: 100,
+                bottomOffset: 20,
+                locationOffset: 50,
+                title: 'biu',
+                titleAsText: true
+            });
+
+        });
+    </script>
 <!-- Bootstrap Core JavaScript -->
 <!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
 <script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
