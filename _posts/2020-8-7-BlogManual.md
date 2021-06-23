@@ -4,8 +4,7 @@ title:      "博客使用手册"
 subtitle:   ""
 date:       2020-8-7
 author:     "Burt"
-header-img: "img/in-post/Blog/BlogManual-bg.jpg"
-onTop: true
+header-img: "img/in-post/HeadPicture/BlogManual-bg.jpg"
 header-mask: 0.5
 tags:
     - Other
@@ -54,7 +53,7 @@ header-style: text
 #### 4.图片路径
 
 ~~~c
-"/img/in-post/..."
+"img/in-post/..."
 ~~~
 
 
@@ -136,3 +135,5 @@ ruby版本不要太高，不然不兼容jekyll导致无法本地部署
 
 
 之后到达目标路径，正常jekyll serve即可
+
+

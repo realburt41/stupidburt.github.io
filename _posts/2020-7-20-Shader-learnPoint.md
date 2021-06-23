@@ -4,7 +4,7 @@ title:      "Shader知识点"
 subtitle:   "滴滴"
 date:       2020-7-20
 author:     "Burt"
-header-img: "img/in-post/Unity/Shader/ShaderLearnPoint-bg.jpg"
+header-img: "img/in-post/HeadPicture/ShaderLearnPoint-bg.jpg"
 tags:
     - Unity
     - Shader

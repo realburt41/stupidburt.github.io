@@ -4,7 +4,7 @@ title:      "C#知识点"
 subtitle:   "滴滴"
 date:       2020-8-6
 author:     "Burt"
-header-img: "img/in-post/CSharp/CSharp-bg.jpg"
+header-img: "img/in-post/HeadPicture/CSharp-bg.jpg"
 header-mask: 0.3
 tags:
     - C#
