@@ -72,6 +72,16 @@ a.mp3	//屏蔽a.mp3文件
 
 
 
+### 四、其他问题
+
+-  Proxy CONNECT aborted：https://blog.csdn.net/henzhuanxin/article/details/109047195
+
+
+
+
+
+
+
 ## Tortoise git
 
 
