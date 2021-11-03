@@ -1,10 +1,11 @@
 ---
 layout:     post
-title:      "Unity-ShaderNote"
-subtitle:   "零散的笔记"
+title:      "Shader笔记"
+subtitle:   "一些零散的知识点"
 date:       2021-4-11
 author:     "Burt"
 header-style: text 
+mathjax: true
 tags:
     - Math
     - Shader
